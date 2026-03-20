@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        style="@style/Widget.MaterialComponents.Toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:navigationIcon="@android:drawable/ic_menu_revert"
+        app:titleTextColor="@android:color/white"
+        app:popupTheme="@style/ThemeOverlay.MaterialComponents.Light"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/headerImage"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/cricket"
+                android:contentDescription="Sport header" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="12dp">
+
+                <TextView
+                    android:id="@+id/headerTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:text="Sport"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/btn_speak"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="Read rules aloud"
+                    android:src="@android:drawable/ic_lock_silent_mode_off" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvRules"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="12dp"
+                android:gravity="center">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnRules"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Rules"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnGround"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Ground Info"
+                    android:layout_marginTop="8dp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnTips"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tips"
+                    android:layout_marginTop="8dp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnWatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Watch Video"
+                    android:layout_marginTop="8dp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnLiveScore"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Live Score"
+                    android:layout_marginTop="8dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

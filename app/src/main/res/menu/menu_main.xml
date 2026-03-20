@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_quiz"
+        android:title="Sports Quiz"
+        android:icon="@drawable/ic_quiz"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_search"
+        android:title="Search"
+        android:icon="@android:drawable/ic_menu_search"
+        app:showAsAction="ifRoom|collapseActionView"
+        app:actionViewClass="androidx.appcompat.widget.SearchView" />
+
+    <item
+        android:id="@+id/action_theme"
+        android:title="Theme"
+        app:actionLayout="@layout/view_theme_switch"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/action_live_score"
+        android:title="Live Score"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/action_about"
+        android:title="About"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/action_favorites"
+        android:title="Favorites"
+        app:showAsAction="never"/>
+
+</menu>

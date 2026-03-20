@@ -1,0 +1,98 @@
+<resources>
+    <string name="app_name">PlayWise</string>
+
+    <string name="cricket_rules">"
+        <h2>Cricket Rules</h2>
+        <p>Cricket is played between two teams of eleven players each on a field at the centre of which is a 22-yard pitch.</p>
+        <h3>Objective</h3>
+        <p>The batting team scores runs by hitting the ball with the bat and running between the wickets, while the bowling and fielding team tries to dismiss each batter.</p>
+        <h3>Scoring</h3>
+        <ul>
+            <li><b>1-3 Runs:</b> Running between wickets.</li>
+            <li><b>4 Runs:</b> Ball hits the ground and then crosses the boundary.</li>
+            <li><b>6 Runs:</b> Ball crosses the boundary without hitting the ground.</li>
+        </ul>
+        <h3>Dismissals</h3>
+        <p>Common ways to get out: Bowled, Caught, LBW (Leg Before Wicket), Run Out, and Stumped.</p>
+    "</string>
+
+    <string name="football_rules">"
+        <h2>Football Rules</h2>
+        <p>Football (Soccer) is a game played by two teams of eleven players using a round ball.</p>
+        <h3>Objective</h3>
+        <p>The object of the game is to score by maneuvering the ball into the opposing goal.</p>
+        <h3>Key Rules</h3>
+        <ul>
+            <li><b>No Hands:</b> Players cannot use their hands or arms (except the goalkeeper).</li>
+            <li><b>Match Duration:</b> A standard match consists of two 45-minute halves.</li>
+            <li><b>Fouls:</b> Physical contact like tripping or pushing results in a free kick or penalty.</li>
+        </ul>
+    "</string>
+
+    <string name="basketball_rules">"
+        <h2>Basketball Rules</h2>
+        <p>Basketball is played by two teams of five players on a rectangular court.</p>
+        <h3>Objective</h3>
+        <p>The objective is to shoot a ball through a hoop that is 10 feet high.</p>
+        <h3>Scoring</h3>
+        <ul>
+            <li><b>2 Points:</b> Field goal made from inside the three-point line.</li>
+            <li><b>3 Points:</b> Field goal made from outside the three-point line.</li>
+            <li><b>1 Point:</b> Free throw.</li>
+        </ul>
+        <h3>Violations</h3>
+        <p>Common violations include Traveling, Double Dribbling, and personal fouls.</p>
+    "</string>
+
+    <string name="volleyball_rules">"
+        <h2>Volleyball Rules</h2>
+        <p>Volleyball is a team sport in which two teams of six players are separated by a net.</p>
+        <h3>Objective</h3>
+        <p>Each team tries to score points by grounding a ball on the opposing team\'s court under organized rules.</p>
+        <h3>Key Rules</h3>
+        <ul>
+            <li><b>Three Hits:</b> A team is allowed three hits to return the ball.</li>
+            <li><b>No Double Hit:</b> A player cannot hit the ball twice in succession.</li>
+            <li><b>Rotation:</b> Players rotate clockwise after winning a serve.</li>
+        </ul>
+    "</string>
+
+    <string name="hockey_rules">"
+        <h2>Hockey Rules</h2>
+        <p>Field Hockey is played by two teams of eleven players using sticks to maneuver a hard ball.</p>
+        <h3>Objective</h3>
+        <p>To score more goals than the opponent by hitting the ball into the opponent\'s goal.</p>
+        <h3>Key Rules</h3>
+        <ul>
+            <li><b>Flat Side:</b> Players must only use the flat side of their stick.</li>
+            <li><b>Feet:</b> Players (except the goalie) cannot use their feet to play the ball.</li>
+            <li><b>Scoring:</b> A goal is scored only if hit from within the \"shooting circle\".</li>
+        </ul>
+    "</string>
+
+    <string name="tennis_rules">"
+        <h2>Tennis Rules</h2>
+        <p>Tennis is a racket sport that can be played individually against a single opponent or between two teams of two players each.</p>
+        <h3>Objective</h3>
+        <p>To hit the ball over the net and into the opponent\'s court in a way that they cannot return it.</p>
+        <h3>Scoring System</h3>
+        <ul>
+            <li><b>Points:</b> Love (0), 15, 30, 40, Game.</li>
+            <li><b>Deuce:</b> A tie at 40-40, requiring a two-point lead to win.</li>
+            <li><b>Sets:</b> A match is usually best of 3 or 5 sets.</li>
+        </ul>
+    "</string>
+
+    <string name="badminton_rules">"
+        <h2>Badminton Rules</h2>
+        <p>Badminton is a racket sport played using rackets to hit a shuttlecock across a net.</p>
+        <h3>Objective</h3>
+        <p>To hit the shuttlecock over the net and land it within the opponent\'s court boundaries.</p>
+        <h3>Key Rules</h3>
+        <ul>
+            <li><b>Service:</b> The serve must be hit underarm and below the waist.</li>
+            <li><b>Let:</b> A rally is replayed if an unexpected disturbance occurs.</li>
+            <li><b>Winning:</b> Matches are usually best of three games to 21 points.</li>
+        </ul>
+    "</string>
+</resources>

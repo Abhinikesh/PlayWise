@@ -1,0 +1,114 @@
+package com.example.playwise.quiz
+
+object QuizSeeder {
+    fun getDefaultQuestions(): List<QuestionEntity> {
+        return listOf(
+            QuestionEntity(
+                question = "How many players are there in a cricket team?",
+                option1 = "9", option2 = "10", option3 = "11", option4 = "12",
+                correctAnswer = 3
+            ),
+            QuestionEntity(
+                question = "Which country won the first ever Football World Cup?",
+                option1 = "Brazil", option2 = "Uruguay", option3 = "Argentina", option4 = "Germany",
+                correctAnswer = 2
+            ),
+            QuestionEntity(
+                question = "What is the duration of a standard football match?",
+                option1 = "45 mins", option2 = "60 mins", option3 = "90 mins", option4 = "120 mins",
+                correctAnswer = 3
+            ),
+            QuestionEntity(
+                question = "In which sport would you use a shuttlecock?",
+                option1 = "Tennis", option2 = "Table Tennis", option3 = "Badminton", option4 = "Squash",
+                correctAnswer = 3
+            ),
+            QuestionEntity(
+                question = "How many points is a free throw worth in basketball?",
+                option1 = "1", option2 = "2", option3 = "3", option4 = "5",
+                correctAnswer = 1
+            ),
+            QuestionEntity(
+                question = "What is the length of a cricket pitch?",
+                option1 = "20 yards", option2 = "22 yards", option3 = "24 yards", option4 = "26 yards",
+                correctAnswer = 2
+            ),
+            QuestionEntity(
+                question = "Which sport is known as the 'king of sports'?",
+                option1 = "Cricket", option2 = "Football", option3 = "Basketball", option4 = "Tennis",
+                correctAnswer = 2
+            ),
+            QuestionEntity(
+                question = "How many sets are usually played in a women's Grand Slam tennis match?",
+                option1 = "1", option2 = "3", option3 = "5", option4 = "7",
+                correctAnswer = 2
+            ),
+            QuestionEntity(
+                question = "Which of these is NOT a way to get out in cricket?",
+                option1 = "Bowled", option2 = "Caught", option3 = "LBW", option4 = "Dribbled",
+                correctAnswer = 4
+            ),
+            QuestionEntity(
+                question = "What is the diameter of a basketball hoop in inches?",
+                option1 = "16", option2 = "18", option3 = "20", option4 = "22",
+                correctAnswer = 2
+            ),
+            QuestionEntity(
+                question = "Which country has won the most FIFA World Cups?",
+                option1 = "Germany", option2 = "Italy", option3 = "Brazil", option4 = "Argentina",
+                correctAnswer = 3
+            ),
+            QuestionEntity(
+                question = "How many rings are there on the Olympic flag?",
+                option1 = "4", option2 = "5", option3 = "6", option4 = "7",
+                correctAnswer = 2
+            ),
+            QuestionEntity(
+                question = "In which sport is the term 'Home Run' used?",
+                option1 = "Cricket", option2 = "Baseball", option3 = "Hockey", option4 = "Golf",
+                correctAnswer = 2
+            ),
+            QuestionEntity(
+                question = "Which grand slam is played on a clay court?",
+                option1 = "Wimbledon", option2 = "US Open", option3 = "French Open", option4 = "Australian Open",
+                correctAnswer = 3
+            ),
+            QuestionEntity(
+                question = "How many players are on a volleyball court per team?",
+                option1 = "5", option2 = "6", option3 = "7", option4 = "8",
+                correctAnswer = 2
+            ),
+            QuestionEntity(
+                question = "Which sport uses the term 'Birdie'?",
+                option1 = "Tennis", option2 = "Golf", option3 = "Badminton", option4 = "Hockey",
+                correctAnswer = 2
+            ),
+            QuestionEntity(
+                question = "Who is known as 'The Flying Sikh' of India?",
+                option1 = "Milkha Singh", option2 = "P.T. Usha", option3 = "Abhinav Bindra", option4 = "Sachin Tendulkar",
+                correctAnswer = 1
+            ),
+            QuestionEntity(
+                question = "What is the maximum score possible in a single frame of ten-pin bowling?",
+                option1 = "10", option2 = "20", option3 = "30", option4 = "100",
+                correctAnswer = 3
+            ),
+            QuestionEntity(
+                question = "How long is a marathon in kilometers?",
+                option1 = "21.1", option2 = "32.2", option3 = "42.195", option4 = "50",
+                correctAnswer = 3
+            ),
+            QuestionEntity(
+                question = "Which sport is played at Lord's in London?",
+                option1 = "Football", option2 = "Rugby", option3 = "Cricket", option4 = "Tennis",
+                correctAnswer = 3
+            ),
+            // Add new questions here
+            QuestionEntity(
+                question = "Which country won FIFA 2022?",
+                option1 = "Brazil", option2 = "France", option3 = "Argentina", option4 = "Germany",
+                correctAnswer = 3
+            )
+        )
+    }
+}
