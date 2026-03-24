@@ -108,6 +108,58 @@ object QuizSeeder {
                 question = "Which country won FIFA 2022?",
                 option1 = "Brazil", option2 = "France", option3 = "Argentina", option4 = "Germany",
                 correctAnswer = 3
+            ),
+            // Add these 10 more questions
+
+            QuestionEntity(
+                question = "Which sport is known as the 'gentleman's game'?",
+                option1 = "Football", option2 = "Cricket", option3 = "Tennis", option4 = "Golf",
+                correctAnswer = 2
+            ),
+            QuestionEntity(
+                question = "How many players are there in a basketball team on court?",
+                option1 = "4", option2 = "5", option3 = "6", option4 = "7",
+                correctAnswer = 2
+            ),
+            QuestionEntity(
+                question = "Which country hosted the 2016 Summer Olympics?",
+                option1 = "China", option2 = "Brazil", option3 = "UK", option4 = "Japan",
+                correctAnswer = 2
+            ),
+            QuestionEntity(
+                question = "In cricket, what does LBW stand for?",
+                option1 = "Leg Before Wicket", option2 = "Long Bat Wicket", option3 = "Last Ball Win", option4 = "Leg By Wide",
+                correctAnswer = 1
+            ),
+            QuestionEntity(
+                question = "Which sport uses a racket and a shuttlecock?",
+                option1 = "Tennis", option2 = "Badminton", option3 = "Squash", option4 = "Table Tennis",
+                correctAnswer = 2
+            ),
+            QuestionEntity(
+                question = "Who has won the most Olympic gold medals?",
+                option1 = "Usain Bolt", option2 = "Michael Phelps", option3 = "Carl Lewis", option4 = "Mark Spitz",
+                correctAnswer = 2
+            ),
+            QuestionEntity(
+                question = "Which country is famous for sumo wrestling?",
+                option1 = "China", option2 = "Japan", option3 = "Korea", option4 = "Thailand",
+                correctAnswer = 2
+            ),
+            QuestionEntity(
+                question = "What is the standard duration of an ODI cricket match (per side overs)?",
+                option1 = "20 overs", option2 = "40 overs", option3 = "50 overs", option4 = "60 overs",
+                correctAnswer = 3
+            ),
+            QuestionEntity(
+                question = "Which sport is associated with the term 'Ace'?",
+                option1 = "Football", option2 = "Tennis", option3 = "Basketball", option4 = "Cricket",
+                correctAnswer = 2
+            ),
+            QuestionEntity(
+                question = "In football, how many players are there on the field for one team?",
+                option1 = "9", option2 = "10", option3 = "11", option4 = "12",
+                correctAnswer = 3
             )
         )
     }
