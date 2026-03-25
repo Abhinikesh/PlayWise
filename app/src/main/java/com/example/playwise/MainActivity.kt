@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import android.view.animation.AccelerateDecelerateInterpolator
 import android.widget.ImageButton
 import android.widget.Switch
 import androidx.appcompat.app.AppCompatActivity
@@ -14,6 +15,7 @@ import androidx.appcompat.app.AppCompatDelegate
 import com.example.playwise.databinding.ActivityMainBinding
 import androidx.appcompat.widget.SearchView
 import com.example.playwise.quiz.QuizActivity
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -56,13 +58,12 @@ class MainActivity : AppCompatActivity() {
     private fun setupBottomNavigation() {
         binding.bottomNavigation.selectedItemId = R.id.nav_home
         
-        // Initial animation for the home tab
         binding.bottomNavigation.post {
-            animateBottomNavigationItem(R.id.nav_home)
+            animateBottomNavigationItem(binding.bottomNavigation, R.id.nav_home)
         }
 
         binding.bottomNavigation.setOnItemSelectedListener { item ->
-            animateBottomNavigationItem(item.itemId)
+            animateBottomNavigationItem(binding.bottomNavigation, item.itemId)
             when (item.itemId) {
                 R.id.nav_home -> true
                 R.id.nav_search -> {
@@ -91,23 +92,30 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun animateBottomNavigationItem(itemId: Int) {
-        val menu = binding.bottomNavigation.menu
+    private fun animateBottomNavigationItem(bottomNav: BottomNavigationView, itemId: Int) {
+        val menu = bottomNav.menu
         for (i in 0 until menu.size()) {
             val id = menu.getItem(i).itemId
-            val view = binding.bottomNavigation.findViewById<View>(id)
+            val itemView = bottomNav.findViewById<View>(id) ?: continue
+            
+            val iconView = itemView.findViewById<View>(com.google.android.material.R.id.navigation_bar_item_icon_view)
+            
             if (id == itemId) {
-                view.animate()
-                    .scaleX(1.15f)
-                    .scaleY(1.15f)
-                    .setDuration(200)
-                    .start()
+                iconView?.animate()
+                    ?.scaleX(1.2f)
+                    ?.scaleY(1.2f)
+                    ?.alpha(1.0f)
+                    ?.setDuration(200)
+                    ?.setInterpolator(AccelerateDecelerateInterpolator())
+                    ?.start()
             } else {
-                view.animate()
-                    .scaleX(1.0f)
-                    .scaleY(1.0f)
-                    .setDuration(200)
-                    .start()
+                iconView?.animate()
+                    ?.scaleX(1.0f)
+                    ?.scaleY(1.0f)
+                    ?.alpha(0.8f)
+                    ?.setDuration(200)
+                    ?.setInterpolator(AccelerateDecelerateInterpolator())
+                    ?.start()
             }
         }
     }
