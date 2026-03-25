@@ -2,13 +2,17 @@ package com.example.playwise.quiz
 
 import android.animation.ArgbEvaluator
 import android.animation.ValueAnimator
+import android.content.Intent
 import android.graphics.Color
+import android.net.Uri
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import com.example.playwise.FavoritesActivity
+import com.example.playwise.MainActivity
 import com.example.playwise.R
 import com.example.playwise.databinding.ActivityQuizBinding
 
@@ -27,6 +31,7 @@ class QuizActivity : AppCompatActivity() {
         setupToolbar()
         setupBackgroundAnimation()
         observeViewModel()
+        setupBottomNavigation()
 
         if (savedInstanceState == null) {
             viewModel.startNewQuiz()
@@ -58,6 +63,40 @@ class QuizActivity : AppCompatActivity() {
         binding.toolbar.setNavigationOnClickListener { finish() }
     }
 
+    private fun setupBottomNavigation() {
+        binding.bottomNavigation.selectedItemId = R.id.nav_quiz
+        binding.bottomNavigation.setOnItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.nav_home -> {
+                    startActivity(Intent(this, MainActivity::class.java).apply {
+                        flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
+                    })
+                    true
+                }
+                R.id.nav_search -> {
+                    startActivity(Intent(this, MainActivity::class.java).apply {
+                        flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
+                    })
+                    // MainActivity can handle expanding search if we pass an extra or use a specific action
+                    true
+                }
+                R.id.nav_live -> {
+                    val url = "https://www.google.com/search?q=live+sports+score"
+                    startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url)))
+                    false
+                }
+                R.id.nav_favorites -> {
+                    startActivity(Intent(this, FavoritesActivity::class.java).apply {
+                        flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
+                    })
+                    true
+                }
+                R.id.nav_quiz -> true
+                else -> false
+            }
+        }
+    }
+
     private fun setupBackgroundAnimation() {
         val colorFrom = ContextCompat.getColor(this, R.color.quiz_bg_start)
         val colorTo = ContextCompat.getColor(this, R.color.quiz_bg_end)
@@ -67,7 +106,6 @@ class QuizActivity : AppCompatActivity() {
             repeatCount = ValueAnimator.INFINITE
             repeatMode = ValueAnimator.REVERSE
             addUpdateListener { animator ->
-                // Use setBackgroundColor to respect the animated color
                 binding.quizRoot.setBackgroundColor(animator.animatedValue as Int)
             }
             start()
@@ -109,7 +147,6 @@ class QuizActivity : AppCompatActivity() {
         
         binding.rgOptions.clearCheck()
         
-        // Simple fade animation for the card content
         binding.questionCard.alpha = 0f
         binding.questionCard.animate().alpha(1f).setDuration(500).start()
     }

@@ -32,8 +32,8 @@ class MainActivity : AppCompatActivity() {
 
         setupClickListeners()
         updateFavoriteIcons()
+        setupBottomNavigation()
 
-        setSupportActionBar(binding.toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         networkMonitor = NetworkMonitor(this)
@@ -53,8 +53,66 @@ class MainActivity : AppCompatActivity() {
         networkMonitor.stop()
     }
 
+    private fun setupBottomNavigation() {
+        binding.bottomNavigation.selectedItemId = R.id.nav_home
+        
+        // Initial animation for the home tab
+        binding.bottomNavigation.post {
+            animateBottomNavigationItem(R.id.nav_home)
+        }
+
+        binding.bottomNavigation.setOnItemSelectedListener { item ->
+            animateBottomNavigationItem(item.itemId)
+            when (item.itemId) {
+                R.id.nav_home -> true
+                R.id.nav_search -> {
+                    binding.toolbar.menu.findItem(R.id.action_search)?.expandActionView()
+                    true
+                }
+                R.id.nav_live -> {
+                    val url = "https://www.google.com/search?q=live+sports+score"
+                    startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url)))
+                    false
+                }
+                R.id.nav_favorites -> {
+                    startActivity(Intent(this, FavoritesActivity::class.java).apply {
+                        flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
+                    })
+                    false
+                }
+                R.id.nav_quiz -> {
+                    startActivity(Intent(this, QuizActivity::class.java).apply {
+                        flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
+                    })
+                    false
+                }
+                else -> false
+            }
+        }
+    }
+
+    private fun animateBottomNavigationItem(itemId: Int) {
+        val menu = binding.bottomNavigation.menu
+        for (i in 0 until menu.size()) {
+            val id = menu.getItem(i).itemId
+            val view = binding.bottomNavigation.findViewById<View>(id)
+            if (id == itemId) {
+                view.animate()
+                    .scaleX(1.15f)
+                    .scaleY(1.15f)
+                    .setDuration(200)
+                    .start()
+            } else {
+                view.animate()
+                    .scaleX(1.0f)
+                    .scaleY(1.0f)
+                    .setDuration(200)
+                    .start()
+            }
+        }
+    }
+
     private fun setupClickListeners() {
-        // Card clicks: start SportDetailActivity with sport name
         binding.cardCricket.setOnClickListener { openSport("Cricket") }
         binding.cardFootball.setOnClickListener { openSport("Football") }
         binding.cardBasketball.setOnClickListener { openSport("Basketball") }
@@ -64,7 +122,6 @@ class MainActivity : AppCompatActivity() {
         binding.cardBadminton.setOnClickListener { openSport("Badminton") }
         binding.cardRugby.setOnClickListener { openSport("Rugby") }
 
-        // Favorite button clicks
         binding.btnFavCricket.setOnClickListener { toggleFavorite("Cricket", binding.btnFavCricket) }
         binding.btnFavFootball.setOnClickListener { toggleFavorite("Football", binding.btnFavFootball) }
         binding.btnFavBasketball.setOnClickListener { toggleFavorite("Basketball", binding.btnFavBasketball) }
@@ -77,7 +134,6 @@ class MainActivity : AppCompatActivity() {
 
     private fun updateFavoriteIcons() {
         val favSet = prefs.getStringSet("favorites", emptySet()) ?: emptySet()
-        
         val sports = listOf("Cricket", "Football", "Basketball", "Volleyball", "Hockey", "Tennis", "Badminton", "Rugby")
         val buttons = listOf(
             binding.btnFavCricket, binding.btnFavFootball, binding.btnFavBasketball, 
@@ -102,10 +158,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.menu_main, menu)
 
-        // 🔎 SEARCH
         val searchItem = menu.findItem(R.id.action_search)
         val searchView = searchItem.actionView as androidx.appcompat.widget.SearchView
-
         searchView.queryHint = "Search Sports..."
 
         searchView.setOnQueryTextListener(object :
@@ -118,7 +172,6 @@ class MainActivity : AppCompatActivity() {
             }
         })
 
-        // 🌙 THEME SWITCH
         val themeItem = menu.findItem(R.id.action_theme)
         val switch = themeItem.actionView?.findViewById<Switch>(R.id.switch_theme)
 
@@ -137,7 +190,6 @@ class MainActivity : AppCompatActivity() {
 
     private fun toggleFavorite(sport: String, button: ImageButton) {
         val favSet = (prefs.getStringSet("favorites", emptySet()) ?: emptySet()).toMutableSet()
-
         if (favSet.contains(sport)) {
             favSet.remove(sport)
             button.setImageResource(android.R.drawable.btn_star_big_off)
@@ -145,13 +197,11 @@ class MainActivity : AppCompatActivity() {
             favSet.add(sport)
             button.setImageResource(android.R.drawable.btn_star_big_on)
         }
-
         prefs.edit().putStringSet("favorites", favSet).apply()
     }
 
     private fun filterSports(query: String?) {
         val text = query?.lowercase() ?: ""
-
         binding.apply {
             cardCricket.visibility = if ("cricket".contains(text)) View.VISIBLE else View.GONE
             cardFootball.visibility = if ("football".contains(text)) View.VISIBLE else View.GONE
@@ -175,8 +225,7 @@ class MainActivity : AppCompatActivity() {
                 true
             }
             R.id.action_live_score -> {
-                val sportName = "cricket" // Default sport, or you can get it from somewhere
-                val url = "https://www.google.com/search?q=$sportName+live+score"
+                val url = "https://www.google.com/search?q=live+sports+score"
                 val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
                 startActivity(browserIntent)
                 true
