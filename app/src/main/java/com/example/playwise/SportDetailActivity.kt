@@ -7,8 +7,11 @@ import android.speech.tts.TextToSpeech
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.RecyclerView
 import com.example.playwise.databinding.ActivitySportDetailBinding
+import com.google.android.material.bottomsheet.BottomSheetDialog
 import java.util.Locale
 
 class SportDetailActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
@@ -71,9 +74,7 @@ class SportDetailActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
         }
 
         binding.btnWatch.setOnClickListener {
-            val youtubeUrl = getYoutubeUrlForSport(sport)
-            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(youtubeUrl))
-            startActivity(intent)
+            showVideoBottomSheet()
         }
 
         binding.btnLiveScore.setOnClickListener {
@@ -81,6 +82,33 @@ class SportDetailActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
             val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
             startActivity(intent)
         }
+    }
+
+    private fun showVideoBottomSheet() {
+        val videos = VideoRepository.getVideosForSport(sport)
+        
+        if (videos.isEmpty()) {
+            Toast.makeText(this, "No videos available for $sport", Toast.LENGTH_SHORT).show()
+            return
+        }
+
+        val bottomSheetDialog = BottomSheetDialog(this)
+        val view = layoutInflater.inflate(R.layout.bottom_sheet_video_list, null)
+        
+        val rvVideos = view.findViewById<RecyclerView>(R.id.rvVideos)
+        val adapter = VideoAdapter(videos) { video ->
+            try {
+                val intent = Intent(Intent.ACTION_VIEW, Uri.parse(video.url))
+                startActivity(intent)
+            } catch (e: Exception) {
+                Toast.makeText(this, "Could not open video", Toast.LENGTH_SHORT).show()
+            }
+            bottomSheetDialog.dismiss()
+        }
+        
+        rvVideos.adapter = adapter
+        bottomSheetDialog.setContentView(view)
+        bottomSheetDialog.show()
     }
 
     private fun toggleReading() {
@@ -142,20 +170,6 @@ class SportDetailActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
                 true
             }
             else -> super.onOptionsItemSelected(item)
-        }
-    }
-
-    private fun getYoutubeUrlForSport(sport: String): String {
-        return when (sport.lowercase()) {
-            "cricket" -> "https://www.youtube.com/watch?v=xhVZ3KCMTfY"
-            "football" -> "https://www.youtube.com/watch?v=VIDEO_ID_FOOTBALL"
-            "basketball" -> "https://www.youtube.com/watch?v=VIDEO_ID_BASKETBALL"
-            "volleyball" -> "https://www.youtube.com/watch?v=VIDEO_ID_VOLLEYBALL"
-            "hockey" -> "https://www.youtube.com/watch?v=VIDEO_ID_HOCKEY"
-            "tennis" -> "https://www.youtube.com/watch?v=VIDEO_ID_TENNIS"
-            "badminton" -> "https://www.youtube.com/watch?v=VIDEO_ID_BADMINTON"
-            "rugby" -> "https://www.youtube.com/watch?v=VIDEO_ID_RUGBY"
-            else -> "https://www.youtube.com"
         }
     }
 
