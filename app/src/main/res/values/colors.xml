@@ -8,4 +8,7 @@
 
     <color name="quiz_bg_start">#3F51B5</color>
     <color name="quiz_bg_end">#1A237E</color>
+
+    <!-- A vibrant, modern 'Deep Sky Blue' that is very attractive and feels premium/human -->
+    <color name="button_blue">#4D96FF</color>
 </resources>

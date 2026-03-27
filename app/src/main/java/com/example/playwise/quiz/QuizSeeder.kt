@@ -160,6 +160,58 @@ object QuizSeeder {
                 question = "In football, how many players are there on the field for one team?",
                 option1 = "9", option2 = "10", option3 = "11", option4 = "12",
                 correctAnswer = 3
+            ),
+            // 10 More Questions
+
+            QuestionEntity(
+                question = "Which country invented cricket?",
+                option1 = "India", option2 = "Australia", option3 = "England", option4 = "South Africa",
+                correctAnswer = 3
+            ),
+            QuestionEntity(
+                question = "What is the national sport of India?",
+                option1 = "Cricket", option2 = "Hockey", option3 = "Kabaddi", option4 = "Football",
+                correctAnswer = 2
+            ),
+            QuestionEntity(
+                question = "How many players are there in a kabaddi team on the court?",
+                option1 = "5", option2 = "6", option3 = "7", option4 = "8",
+                correctAnswer = 3
+            ),
+            QuestionEntity(
+                question = "Which sport is played at Wimbledon?",
+                option1 = "Cricket", option2 = "Tennis", option3 = "Football", option4 = "Badminton",
+                correctAnswer = 2
+            ),
+            QuestionEntity(
+                question = "In which sport is the term 'Goalkeeper' used?",
+                option1 = "Cricket", option2 = "Football", option3 = "Basketball", option4 = "Tennis",
+                correctAnswer = 2
+            ),
+            QuestionEntity(
+                question = "Which Indian cricketer is known as 'Master Blaster'?",
+                option1 = "Virat Kohli", option2 = "MS Dhoni", option3 = "Sachin Tendulkar", option4 = "Rohit Sharma",
+                correctAnswer = 3
+            ),
+            QuestionEntity(
+                question = "How many points is a three-pointer worth in basketball?",
+                option1 = "1", option2 = "2", option3 = "3", option4 = "4",
+                correctAnswer = 3
+            ),
+            QuestionEntity(
+                question = "Which sport uses a bat, ball, and stumps?",
+                option1 = "Baseball", option2 = "Cricket", option3 = "Hockey", option4 = "Golf",
+                correctAnswer = 2
+            ),
+            QuestionEntity(
+                question = "What is the maximum number of overs in a T20 cricket match per side?",
+                option1 = "10", option2 = "15", option3 = "20", option4 = "25",
+                correctAnswer = 3
+            ),
+            QuestionEntity(
+                question = "Which sport is known as the fastest racket sport?",
+                option1 = "Tennis", option2 = "Badminton", option3 = "Squash", option4 = "Table Tennis",
+                correctAnswer = 2
             )
         )
     }

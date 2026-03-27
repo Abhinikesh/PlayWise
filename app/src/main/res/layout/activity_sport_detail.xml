@@ -44,18 +44,8 @@
                     android:layout_alignParentStart="true"
                     android:layout_centerVertical="true"
                     android:text="Sport"
-                    android:textSize="20sp"
+                    android:textSize="30sp"
                     android:textStyle="bold" />
-
-                <ImageButton
-                    android:id="@+id/btn_speak"
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true"
-                    android:background="?attr/selectableItemBackgroundBorderless"
-                    android:contentDescription="Read rules aloud"
-                    android:src="@android:drawable/ic_lock_silent_mode_off" />
 
             </RelativeLayout>
 
@@ -63,7 +53,8 @@
                 android:id="@+id/tvRules"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingTop="8dp"/>
+                android:paddingTop="8dp"
+                android:visibility="gone"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -76,35 +67,41 @@
                     android:id="@+id/btnRules"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Rules"/>
+                    android:text="Rules"
+                    android:textColorLink="#009688"
+                    app:backgroundTint="@color/button_blue" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnGround"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Ground Info"
-                    android:layout_marginTop="8dp"/>
+                    android:layout_marginTop="8dp"
+                    app:backgroundTint="@color/button_blue" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnTips"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Tips"
-                    android:layout_marginTop="8dp"/>
+                    android:layout_marginTop="8dp"
+                    app:backgroundTint="@color/button_blue" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnWatch"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Watch Video"
-                    android:layout_marginTop="8dp"/>
+                    android:layout_marginTop="8dp"
+                    app:backgroundTint="@color/button_blue" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnLiveScore"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Live Score"
-                    android:layout_marginTop="8dp"/>
+                    android:layout_marginTop="8dp"
+                    app:backgroundTint="@color/button_blue" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

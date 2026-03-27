@@ -123,29 +123,240 @@ class RulesActivity : AppCompatActivity() {
                 "Dismissals" to "Common ways to get out: Bowled, Caught, LBW (Leg Before Wicket), Run Out, and Stumped."
             )
             "football" -> listOf(
-                "Objective" to "The object of the game is to score by maneuvering the ball into the opposing goal.",
-                "Key Rules" to "• No Hands: Players cannot use their hands or arms (except the goalkeeper).\n• Match Duration: A standard match consists of two 45-minute halves.\n• Fouls: Physical contact like tripping or pushing results in a free kick or penalty."
+                "Objective" to "1. Basic Information\n\n" +
+                        "• Two teams with 11 players each\n" +
+                        "• Match duration: 90 minutes (2 halves of 45 mins)\n" +
+                        "• Played on a rectangular field with goals\n\n" +
+
+                        "2. Objective of the Game\n\n" +
+                        "To score goals by getting the ball into the opponent’s net.\n\n" +
+
+                        "3. Key Rules\n\n" +
+                        "• Players cannot use hands (except goalkeeper)\n" +
+                        "• Offside rule applies\n" +
+                        "• Game starts with kickoff\n\n" +
+
+                        "4. Scoring\n\n" +
+                        "• Each goal = 1 point\n\n" +
+
+                        "5. Fouls & Penalties\n\n" +
+                        "• Tripping, pushing → Free kick\n" +
+                        "• Serious foul → Yellow/Red card\n" +
+                        "• Penalty kick for fouls inside box\n\n" +
+
+                        "Football builds teamwork and stamina."
             )
             "basketball" -> listOf(
-                "Objective" to "The objective is to shoot a ball through a hoop that is 10 feet high.",
-                "Scoring" to "• 2 Points: Field goal made from inside the three-point line.\n• 3 Points: Field goal made from outside the three-point line.\n• 1 Point: Free throw.",
-                "Violations" to "Common violations include Traveling, Double Dribbling, and personal fouls."
+                "Objective" to "1. Basic Information\n\n" +
+                        "• Two teams with 5 players each\n" +
+                        "• Played on a rectangular court\n" +
+                        "• Game divided into 4 quarters\n\n" +
+
+                        "2. Objective of the Game\n\n" +
+                        "Score points by shooting the ball through the opponent’s hoop.\n\n" +
+
+                        "3. Scoring\n\n" +
+                        "• 2 points: Inside arc\n" +
+                        "• 3 points: Outside arc\n" +
+                        "• 1 point: Free throw\n\n" +
+
+                        "4. Key Rules\n\n" +
+                        "• Must dribble while moving\n" +
+                        "• 24-second shot clock\n\n" +
+
+                        "5. Violations\n\n" +
+                        "• Traveling\n" +
+                        "• Double dribble\n" +
+                        "• Personal fouls\n\n" +
+
+                        "Basketball improves agility and coordination."
             )
             "volleyball" -> listOf(
-                "Objective" to "Each team tries to score points by grounding a ball on the opposing team's court under organized rules.",
-                "Key Rules" to "• Three Hits: A team is allowed three hits to return the ball.\n• No Double Hit: A player cannot hit the ball twice in succession.\n• Rotation: Players rotate clockwise after winning a serve."
+                "Objective" to "1. Basic Information\n\n" +
+                        "• Two teams of 6 players each\n" +
+                        "• Played on a rectangular court divided by a net\n" +
+                        "• Matches are played in sets\n\n" +
+
+                        "2. Objective of the Game\n\n" +
+                        "The objective is to score points by sending the ball over the net and grounding it on the opponent’s court.\n\n" +
+
+                        "3. Match Structure\n\n" +
+                        "• Matches are best of 5 sets\n" +
+                        "• Each set is played to 25 points (win by 2)\n" +
+                        "• Final set (5th) is played to 15 points\n\n" +
+
+                        "4. Gameplay Rules\n\n" +
+                        "• Each team can hit the ball up to 3 times\n" +
+                        "• A player cannot hit the ball twice consecutively\n" +
+                        "• A block does not count as a hit\n\n" +
+
+                        "5. Scoring System\n\n" +
+                        "• Rally scoring is used (point on every serve)\n" +
+                        "• Point scored when opponent fails to return ball\n\n" +
+
+                        "6. Rotation\n\n" +
+                        "• Players rotate clockwise after winning serve\n" +
+                        "• Ensures all players serve\n\n" +
+
+                        "7. Faults\n\n" +
+                        "• Double hit\n" +
+                        "• Carrying or lifting the ball\n" +
+                        "• Touching the net\n" +
+                        "• Foot fault during serve\n\n" +
+
+                        "8. Player Positions\n\n" +
+                        "• Front row: Attack and block\n" +
+                        "• Back row: Defense and serve\n\n" +
+
+                        "Volleyball develops teamwork, reflexes, and coordination."
             )
             "hockey" -> listOf(
-                "Objective" to "To score more goals than the opponent by hitting the ball into the opponent's goal.",
-                "Key Rules" to "• Flat Side: Players must only use the flat side of their stick.\n• Feet: Players (except the goalie) cannot use their feet to play the ball.\n• Scoring: A goal is scored only if hit from within the \"shooting circle\"."
+                "Objective" to "1. Basic Information\n\n" +
+                        "• Two teams with 11 players each\n" +
+                        "• Played on a synthetic turf field\n" +
+                        "• Match duration: 60 minutes (4 quarters)\n\n" +
+
+                        "2. Objective of the Game\n\n" +
+                        "To score goals by hitting the ball into the opponent’s goal using a hockey stick.\n\n" +
+
+                        "3. Match Structure\n\n" +
+                        "• 4 quarters of 15 minutes each\n" +
+                        "• Short breaks between quarters\n\n" +
+
+                        "4. Gameplay Rules\n\n" +
+                        "• Only flat side of stick is allowed\n" +
+                        "• Players cannot use feet or body (except goalkeeper)\n" +
+                        "• No dangerous or high stick play\n\n" +
+
+                        "5. Scoring\n\n" +
+                        "• Goal is valid only if shot is taken inside shooting circle\n\n" +
+
+                        "6. Fouls & Penalties\n\n" +
+                        "• Minor fouls → Free hit\n" +
+                        "• Serious fouls → Penalty corner or stroke\n" +
+                        "• Dangerous play is penalized\n\n" +
+
+                        "7. Key Positions\n\n" +
+                        "• Forwards: Score goals\n" +
+                        "• Midfielders: Control game\n" +
+                        "• Defenders: Stop attacks\n" +
+                        "• Goalkeeper: Protect goal\n\n" +
+
+                        "8. Important Skills\n\n" +
+                        "• Dribbling\n" +
+                        "• Passing\n" +
+                        "• Tackling\n\n" +
+
+                        "Hockey improves speed, stamina, and teamwork."
             )
             "tennis" -> listOf(
-                "Objective" to "To hit the ball over the net and into the opponent's court in a way that they cannot return it.",
-                "Scoring System" to "• Points: Love (0), 15, 30, 40, Game.\n• Deuce: A tie at 40-40, requiring a two-point lead to win.\n• Sets: A match is usually best of 3 or 5 sets."
+                "Objective" to "1. Basic Information\n\n" +
+                        "• Played between 2 (singles) or 4 players (doubles)\n" +
+                        "• Played on different surfaces like grass, clay, or hard court\n" +
+                        "• The player/team winning more sets wins the match\n\n" +
+
+                        "2. Objective of the Game\n\n" +
+                        "Players aim to hit the ball over the net into the opponent’s court in such a way that the opponent cannot return it.\n\n" +
+
+                        "3. Match Structure\n\n" +
+                        "• A match consists of sets\n" +
+                        "• A set consists of games\n" +
+                        "• Usually played as best of 3 or 5 sets\n\n" +
+
+                        "4. Scoring System\n\n" +
+                        "• Points: Love (0), 15, 30, 40, Game\n" +
+                        "• Deuce occurs at 40-40\n" +
+                        "• Player must win 2 consecutive points after deuce\n\n" +
+
+                        "5. Key Rules\n\n" +
+                        "• Serve must land diagonally in service box\n" +
+                        "• Each player gets 2 serves\n" +
+                        "• Ball can bounce only once before return\n\n" +
+
+                        "6. Faults\n\n" +
+                        "• Double fault (missing both serves)\n" +
+                        "• Ball hitting net or going out\n\n" +
+
+                        "Tennis improves fitness, focus, and coordination."
             )
             "badminton" -> listOf(
-                "Objective" to "To hit the shuttlecock over the net and land it within the opponent's court boundaries.",
-                "Key Rules" to "• Service: The serve must be hit underarm and below the waist.\n• Let: A rally is replayed if an unexpected disturbance occurs.\n• Winning: Matches are usually best of three games to 21 points."
+                "Objective" to "1. Basic Information\n\n" +
+                        "• Played as singles or doubles\n" +
+                        "• Played on a rectangular indoor court\n" +
+                        "• Uses a shuttlecock instead of a ball\n\n" +
+
+                        "2. Objective of the Game\n\n" +
+                        "To hit the shuttlecock over the net and land it in the opponent’s court.\n\n" +
+
+                        "3. Match Structure\n\n" +
+                        "• Matches are best of 3 games\n" +
+                        "• Each game is played to 21 points\n" +
+                        "• Must win by 2 points\n\n" +
+
+                        "4. Scoring System\n\n" +
+                        "• Rally scoring (point on every rally)\n" +
+                        "• Point awarded when opponent fails to return shuttle\n\n" +
+
+                        "5. Service Rules\n\n" +
+                        "• Serve must be underarm\n" +
+                        "• Shuttle must be hit below waist\n" +
+                        "• Serve diagonally into opponent’s court\n\n" +
+
+                        "6. Gameplay Rules\n\n" +
+                        "• Shuttle cannot hit the ground during rally\n" +
+                        "• Players must stay within boundaries\n\n" +
+
+                        "7. Faults\n\n" +
+                        "• Shuttle out of bounds\n" +
+                        "• Double hit\n" +
+                        "• Touching the net\n\n" +
+
+                        "8. Types of Shots\n\n" +
+                        "• Smash (powerful shot)\n" +
+                        "• Drop shot (soft near net)\n" +
+                        "• Clear (deep shot)\n\n" +
+
+                        "Badminton improves speed, reflexes, and agility."
+            )
+            "rugby" -> listOf(
+                "Objective" to "1. Basic Information\n\n" +
+                        "• Two teams with 15 players each (Rugby Union)\n" +
+                        "• Played on a large rectangular field\n" +
+                        "• Match duration: 80 minutes (2 halves of 40 mins)\n\n" +
+
+                        "2. Objective of the Game\n\n" +
+                        "The objective is to score more points than the opponent by carrying, passing, or kicking the ball into the opponent’s goal area.\n\n" +
+
+                        "3. Match Structure\n\n" +
+                        "• Two halves of 40 minutes each\n" +
+                        "• Short halftime break\n" +
+                        "• Game starts with a kickoff\n\n" +
+
+                        "4. Scoring System\n\n" +
+                        "• Try (5 points): Touching the ball in opponent’s goal area\n" +
+                        "• Conversion (2 points): Kick after try\n" +
+                        "• Penalty Kick (3 points)\n" +
+                        "• Drop Goal (3 points)\n\n" +
+
+                        "5. Gameplay Rules\n\n" +
+                        "• Ball can be carried forward but passed backward only\n" +
+                        "• Players can kick the ball forward\n" +
+                        "• Tackling is allowed to stop opponent\n\n" +
+
+                        "6. Set Pieces\n\n" +
+                        "• Scrum: Restart play after minor infringement\n" +
+                        "• Line-out: Restart when ball goes out of bounds\n\n" +
+
+                        "7. Fouls & Penalties\n\n" +
+                        "• Forward pass is not allowed\n" +
+                        "• High tackle or dangerous play is penalized\n" +
+                        "• Offside results in penalty\n\n" +
+
+                        "8. Player Positions\n\n" +
+                        "• Forwards: Strength and physical play\n" +
+                        "• Backs: Speed and scoring\n\n" +
+
+                        "Rugby builds strength, teamwork, and endurance."
             )
             else -> listOf("Error" to "Rules for $sport are not available yet.")
         }
