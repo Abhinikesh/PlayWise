@@ -97,7 +97,7 @@
                                     android:layout_width="122dp"
                                     android:layout_height="100dp"
                                     android:contentDescription="Cricket"
-                                    android:src="@drawable/cricket" />
+                                    android:src="@drawable/cricket_n" />
 
                                 <TextView
                                     android:layout_width="wrap_content"
@@ -146,7 +146,7 @@
                                     android:layout_width="122dp"
                                     android:layout_height="100dp"
                                     android:contentDescription="Football"
-                                    android:src="@drawable/football" />
+                                    android:src="@drawable/football_n" />
 
                                 <TextView
                                     android:layout_width="wrap_content"
@@ -195,7 +195,7 @@
                                     android:layout_width="122dp"
                                     android:layout_height="100dp"
                                     android:contentDescription="Basketball"
-                                    android:src="@drawable/basketball" />
+                                    android:src="@drawable/basket_ball_n" />
 
                                 <TextView
                                     android:layout_width="wrap_content"
@@ -244,7 +244,7 @@
                                     android:layout_width="122dp"
                                     android:layout_height="100dp"
                                     android:contentDescription="Volleyball"
-                                    android:src="@drawable/vollyball" />
+                                    android:src="@drawable/volleyball_n" />
 
                                 <TextView
                                     android:layout_width="wrap_content"
@@ -293,7 +293,7 @@
                                     android:layout_width="122dp"
                                     android:layout_height="100dp"
                                     android:contentDescription="Hockey"
-                                    android:src="@drawable/hockey" />
+                                    android:src="@drawable/hockey_n" />
 
                                 <TextView
                                     android:layout_width="wrap_content"
@@ -342,7 +342,7 @@
                                     android:layout_width="122dp"
                                     android:layout_height="100dp"
                                     android:contentDescription="Tennis"
-                                    android:src="@drawable/tennis" />
+                                    android:src="@drawable/tennis_n" />
 
                                 <TextView
                                     android:layout_width="wrap_content"
@@ -391,7 +391,7 @@
                                     android:layout_width="122dp"
                                     android:layout_height="100dp"
                                     android:contentDescription="Badminton"
-                                    android:src="@drawable/badminton" />
+                                    android:src="@drawable/badminton_n" />
 
                                 <TextView
                                     android:layout_width="wrap_content"
@@ -440,7 +440,7 @@
                                     android:layout_width="122dp"
                                     android:layout_height="100dp"
                                     android:contentDescription="Rugby"
-                                    android:src="@drawable/rugby" />
+                                    android:src="@drawable/rugby_n" />
 
                                 <TextView
                                     android:layout_width="wrap_content"
