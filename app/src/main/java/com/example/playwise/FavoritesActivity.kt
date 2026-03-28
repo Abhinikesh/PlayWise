@@ -3,6 +3,7 @@ package com.example.playwise
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.TextView
 import android.widget.Toast
@@ -33,7 +34,6 @@ class FavoritesActivity : AppCompatActivity() {
         btnExplore = findViewById(R.id.btnExplore)
 
         setupRecyclerView()
-        loadFavorites()
         setupBottomNavigation()
 
         btnExplore.setOnClickListener {
@@ -42,6 +42,12 @@ class FavoritesActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        // Always load fresh data when the screen becomes visible
+        loadFavorites()
     }
 
     private fun setupRecyclerView() {
@@ -57,9 +63,11 @@ class FavoritesActivity : AppCompatActivity() {
     }
 
     private fun loadFavorites() {
-        val prefs = getSharedPreferences("settings", MODE_PRIVATE)
-        val favSet = prefs.getStringSet("favorites", emptySet()) ?: emptySet()
+        // Load fresh data from FavoriteManager
+        val favSet = FavoriteManager.getAllFavorites(this)
         val favList = favSet.toList().sorted()
+        
+        Log.d("FAV_DEBUG", "Activity Loading Favorites: $favSet")
 
         adapter.updateData(favList)
         
@@ -76,14 +84,9 @@ class FavoritesActivity : AppCompatActivity() {
     }
 
     private fun removeFavorite(sport: String) {
-        val prefs = getSharedPreferences("settings", MODE_PRIVATE)
-        val favSet = prefs.getStringSet("favorites", emptySet())?.toMutableSet() ?: mutableSetOf<String>()
-        
-        if (favSet.remove(sport)) {
-            prefs.edit().putStringSet("favorites", favSet).apply()
-            loadFavorites()
-            Toast.makeText(this, "$sport removed from favorites", Toast.LENGTH_SHORT).show()
-        }
+        FavoriteManager.removeFavorite(this, sport)
+        loadFavorites() // Refresh UI immediately
+        Toast.makeText(this, "$sport removed from favorites", Toast.LENGTH_SHORT).show()
     }
 
     private fun navigateToDetails(sport: String) {

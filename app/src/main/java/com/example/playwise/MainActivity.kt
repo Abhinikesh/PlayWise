@@ -33,12 +33,16 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(binding.toolbar)
 
         setupClickListeners()
-        updateFavoriteIcons()
         setupBottomNavigation()
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         networkMonitor = NetworkMonitor(this)
+    }
+
+    override fun onResume() {
+        super.onResume()
+        updateFavoriteIcons()
     }
 
     override fun onStart() {
@@ -85,7 +89,7 @@ class MainActivity : AppCompatActivity() {
                     startActivity(Intent(this, QuizActivity::class.java).apply {
                         flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
                     })
-                    false
+                    true
                 }
                 else -> false
             }
@@ -141,7 +145,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun updateFavoriteIcons() {
-        val favSet = prefs.getStringSet("favorites", emptySet()) ?: emptySet()
         val sports = listOf("Cricket", "Football", "Basketball", "Volleyball", "Hockey", "Tennis", "Badminton", "Rugby")
         val buttons = listOf(
             binding.btnFavCricket, binding.btnFavFootball, binding.btnFavBasketball, 
@@ -150,7 +153,7 @@ class MainActivity : AppCompatActivity() {
         )
 
         sports.forEachIndexed { index, sport ->
-            val isFav = favSet.contains(sport)
+            val isFav = FavoriteManager.isFavorite(this, sport)
             buttons[index].setImageResource(
                 if (isFav) android.R.drawable.btn_star_big_on else android.R.drawable.btn_star_big_off
             )
@@ -197,15 +200,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun toggleFavorite(sport: String, button: ImageButton) {
-        val favSet = (prefs.getStringSet("favorites", emptySet()) ?: emptySet()).toMutableSet()
-        if (favSet.contains(sport)) {
-            favSet.remove(sport)
+        if (FavoriteManager.isFavorite(this, sport)) {
+            FavoriteManager.removeFavorite(this, sport)
             button.setImageResource(android.R.drawable.btn_star_big_off)
         } else {
-            favSet.add(sport)
+            FavoriteManager.addFavorite(this, sport)
             button.setImageResource(android.R.drawable.btn_star_big_on)
         }
-        prefs.edit().putStringSet("favorites", favSet).apply()
     }
 
     private fun filterSports(query: String?) {
