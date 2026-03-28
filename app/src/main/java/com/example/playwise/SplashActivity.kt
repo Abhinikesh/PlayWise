@@ -12,10 +12,10 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
-        // Reduced delay to 1.5 seconds for a more professional, snappy feel
+        // Reduced delay to 1 second for a more professional, snappy feel
         Handler(Looper.getMainLooper()).postDelayed({
             startActivity(Intent(this, MainActivity::class.java))
             finish()
-        }, 1500) 
+        }, 1000)
     }
 }
