@@ -212,6 +212,31 @@ object QuizSeeder {
                 question = "Which sport is known as the fastest racket sport?",
                 option1 = "Tennis", option2 = "Badminton", option3 = "Squash", option4 = "Table Tennis",
                 correctAnswer = 2
+            ),
+            QuestionEntity(
+                question = "How many players are there in a cricket team?",
+                option1 = "9", option2 = "10", option3 = "11", option4 = "12",
+                correctAnswer = 3
+            ),
+            QuestionEntity(
+                question = "What is the length of a cricket pitch?",
+                option1 = "20 yards", option2 = "22 yards", option3 = "24 yards", option4 = "18 yards",
+                correctAnswer = 2
+            ),
+            QuestionEntity(
+                question = "How many balls are there in one over?",
+                option1 = "5", option2 = "6", option3 = "7", option4 = "8",
+                correctAnswer = 2
+            ),
+            QuestionEntity(
+                question = "What is a 'duck' in cricket?",
+                option1 = "Scoring zero runs", option2 = "Hitting six runs", option3 = "Getting injured", option4 = "Wide ball",
+                correctAnswer = 1
+            ),
+            QuestionEntity(
+                question = "Which country hosted the first Cricket World Cup?",
+                option1 = "India", option2 = "Australia", option3 = "England", option4 = "South Africa",
+                correctAnswer = 3
             )
         )
     }
