@@ -34,6 +34,7 @@
         <activity android:name=".GroundActivity" />
         <activity android:name=".TipsActivity" />
         <activity android:name=".SportDetailActivity" />
+        <activity android:name=".TicketActivity" />
         <activity
             android:name=".quiz.QuizActivity"
             android:label="Sports Quiz"

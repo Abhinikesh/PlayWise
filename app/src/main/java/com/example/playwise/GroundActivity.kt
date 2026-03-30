@@ -31,19 +31,51 @@ class GroundActivity : AppCompatActivity() {
         val grounds = when (sport.lowercase()) {
 
             "cricket" -> listOf(
-                Ground("HPCA Stadium", "Dharamshala - 22 yard pitch", R.drawable.dharamshala),
-                Ground("Lord's Cricket Ground", "London - Home of Cricket", R.drawable.cricket),
-                Ground("MCG", "Melbourne - 100,000+ capacity", R.drawable.cricket),
-                Ground("Eden Gardens", "Kolkata - Historic stadium", R.drawable.cricket),
-                Ground("Wankhede Stadium", "Mumbai - Sea facing stadium", R.drawable.cricket)
+                Ground(
+                    "HPCA Stadium",
+                    "📍 Dharamshala - 22 yard pitch\n🏟 Capacity: 20,000 seats\n🏏 Matches Played: 19",
+                    R.drawable.dharamshala
+                ),
+
+                Ground(
+                    "Lord's Cricket Ground",
+                    "London - Home of Cricket\n🏟 Capacity: 80,000 seats\n🏏 Matches Played: 76",
+                    R.drawable.cricket),
+                Ground(
+                    "MCG",
+                    "Melbourne - 100,000+ capacity",
+                    R.drawable.cricket),
+                Ground(
+                    "Eden Gardens",
+                    "Kolkata - Historic stadium",
+                    R.drawable.cricket),
+                Ground(
+                    "Wankhede Stadium",
+                    "Mumbai - Sea facing stadium",
+                    R.drawable.cricket)
             )
 
             "football" -> listOf(
-                Ground("Camp Nou", "Barcelona - 99,000 capacity", R.drawable.football),
-                Ground("Old Trafford", "Manchester - 74,000 capacity", R.drawable.football),
-                Ground("Wembley Stadium", "London - 90,000 capacity", R.drawable.football),
-                Ground("Allianz Arena", "Germany - 75,000 capacity", R.drawable.football),
-                Ground("Santiago Bernabeu", "Madrid - Real Madrid stadium", R.drawable.football)
+                Ground(
+                    "Camp Nou",
+                    "Barcelona - 99,000 capacity",
+                    R.drawable.football),
+                Ground(
+                    "Old Trafford",
+                    "Manchester - 74,000 capacity",
+                    R.drawable.football),
+                Ground(
+                    "Wembley Stadium",
+                    "London - 90,000 capacity",
+                    R.drawable.football),
+                Ground(
+                    "Allianz Arena",
+                    "Germany - 75,000 capacity",
+                    R.drawable.football),
+                Ground(
+                    "Santiago Bernabeu",
+                    "Madrid - Real Madrid stadium",
+                    R.drawable.football)
             )
 
             "basketball" -> listOf(

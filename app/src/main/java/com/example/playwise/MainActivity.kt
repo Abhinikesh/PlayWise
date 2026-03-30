@@ -79,6 +79,12 @@ class MainActivity : AppCompatActivity() {
                     startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url)))
                     false
                 }
+                R.id.nav_tickets -> {
+                    startActivity(Intent(this, TicketActivity::class.java).apply {
+                        flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
+                    })
+                    false
+                }
                 R.id.nav_favorites -> {
                     startActivity(Intent(this, FavoritesActivity::class.java).apply {
                         flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT

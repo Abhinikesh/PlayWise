@@ -13,6 +13,10 @@
         android:icon="@drawable/ic_live_score"
         android:title="Live" />
     <item
+        android:id="@+id/nav_tickets"
+        android:icon="@android:drawable/ic_menu_agenda"
+        android:title="Tickets" />
+    <item
         android:id="@+id/nav_favorites"
         android:icon="@android:drawable/btn_star_big_on"
         android:title="Favorites" />
