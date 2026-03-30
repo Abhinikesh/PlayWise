@@ -252,6 +252,16 @@ object QuizSeeder {
                 option1 = "3 runs in one ball", option2 = "3 wickets in 3 consecutive balls", option3 = "3 catches", option4 = "3 overs",
                 correctAnswer = 2
             ),
+            QuestionEntity(
+                question = "Which player is known as the 'God of Cricket'?",
+                option1 = "Virat Kohli", option2 = "MS Dhoni", option3 = "Sachin Tendulkar", option4 = "Ricky Ponting",
+                correctAnswer = 3
+            ),
+            QuestionEntity(
+                question = "What is the maximum number of overs per side in a One Day International (ODI) match?",
+                option1 = "20", option2 = "40", option3 = "50", option4 = "60",
+                correctAnswer = 3
+            )
         )
     }
 }
