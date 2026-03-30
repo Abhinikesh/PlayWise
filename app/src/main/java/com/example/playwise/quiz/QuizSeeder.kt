@@ -237,7 +237,21 @@ object QuizSeeder {
                 question = "Which country hosted the first Cricket World Cup?",
                 option1 = "India", option2 = "Australia", option3 = "England", option4 = "South Africa",
                 correctAnswer = 3
-            )
+            ),QuestionEntity(
+                question = "What does LBW stand for in cricket?",
+                option1 = "Long Ball Wide", option2 = "Leg Before Wicket", option3 = "Low Bat Wicket", option4 = "Leg Ball Win",
+                correctAnswer = 2
+            ),
+            QuestionEntity(
+                question = "How many runs are awarded for hitting the ball over the boundary without bouncing?",
+                option1 = "4", option2 = "5", option3 = "6", option4 = "3",
+                correctAnswer = 3
+            ),
+            QuestionEntity(
+                question = "What is a hat-trick in cricket?",
+                option1 = "3 runs in one ball", option2 = "3 wickets in 3 consecutive balls", option3 = "3 catches", option4 = "3 overs",
+                correctAnswer = 2
+            ),
         )
     }
 }
