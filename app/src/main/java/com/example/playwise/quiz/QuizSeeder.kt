@@ -311,7 +311,12 @@ object QuizSeeder {
                 question = "What is shown to indicate a warning to a player?",
                 option1 = "Red card", option2 = "Yellow card", option3 = "Green card", option4 = "Blue card",
                 correctAnswer = 2
-            )
+            ),
+            QuestionEntity(
+                question = "How many players are there in a basketball team on the court?",
+                option1 = "4", option2 = "5", option3 = "6", option4 = "7",
+                correctAnswer = 2
+            ),
 
 
 
