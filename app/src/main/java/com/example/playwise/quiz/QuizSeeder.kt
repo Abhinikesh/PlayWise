@@ -317,6 +317,12 @@ object QuizSeeder {
                 option1 = "4", option2 = "5", option3 = "6", option4 = "7",
                 correctAnswer = 2
             ),
+            QuestionEntity(
+                question = "What is the height of a basketball hoop?",
+                option1 = "8 feet", option2 = "9 feet", option3 = "10 feet", option4 = "11 feet",
+                correctAnswer = 3
+            ),
+
 
 
 
