@@ -277,7 +277,11 @@ object QuizSeeder {
                 option1 = "Defender", option2 = "Midfielder", option3 = "Goalkeeper", option4 = "Striker",
                 correctAnswer = 3
             ),
-
+            QuestionEntity(
+                question = "What does FIFA stand for?",
+                option1 = "Football India Federation Association", option2 = "Federation Internationale de Football Association", option3 = "Football International Federation Association", option4 = "None",
+                correctAnswer = 2
+            ),
 
             )
     }
