@@ -282,6 +282,16 @@ object QuizSeeder {
                 option1 = "Football India Federation Association", option2 = "Federation Internationale de Football Association", option3 = "Football International Federation Association", option4 = "None",
                 correctAnswer = 2
             ),
+            QuestionEntity(
+                question = "What happens when a player gets a red card?",
+                option1 = "Warning", option2 = "Free kick", option3 = "Player is sent off", option4 = "Goal awarded",
+                correctAnswer = 3
+            ),
+            QuestionEntity(
+                question = "What is the distance of a penalty kick in football?",
+                option1 = "10 yards", option2 = "12 yards", option3 = "15 yards", option4 = "18 yards",
+                correctAnswer = 2
+            ),
 
             )
     }
