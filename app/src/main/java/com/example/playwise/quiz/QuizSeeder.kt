@@ -292,6 +292,12 @@ object QuizSeeder {
                 option1 = "10 yards", option2 = "12 yards", option3 = "15 yards", option4 = "18 yards",
                 correctAnswer = 2
             ),
+            QuestionEntity(
+                question = "How many referees are there on the field during a football match?",
+                option1 = "1", option2 = "2", option3 = "3", option4 = "4",
+                correctAnswer = 1
+            ),
+
 
             )
     }
