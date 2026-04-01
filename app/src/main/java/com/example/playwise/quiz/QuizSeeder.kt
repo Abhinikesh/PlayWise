@@ -307,6 +307,11 @@ object QuizSeeder {
                 option1 = "Germany", option2 = "Brazil", option3 = "France", option4 = "Argentina",
                 correctAnswer = 3
             ),
+            QuestionEntity(
+                question = "What is shown to indicate a warning to a player?",
+                option1 = "Red card", option2 = "Yellow card", option3 = "Green card", option4 = "Blue card",
+                correctAnswer = 2
+            )
 
 
 
