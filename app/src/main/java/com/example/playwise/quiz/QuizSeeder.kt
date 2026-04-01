@@ -402,6 +402,11 @@ object QuizSeeder {
                 option1 = "3", option2 = "4", option3 = "5", option4 = "6",
                 correctAnswer = 3
             ),
+            QuestionEntity(
+                question = "How many points are needed to win a set in volleyball?",
+                option1 = "21", option2 = "25", option3 = "30", option4 = "15",
+                correctAnswer = 2
+            ),
 
 
 
