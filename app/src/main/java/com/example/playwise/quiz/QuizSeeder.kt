@@ -297,6 +297,12 @@ object QuizSeeder {
                 option1 = "1", option2 = "2", option3 = "3", option4 = "4",
                 correctAnswer = 1
             ),
+            QuestionEntity(
+                question = "What is an offside in football?",
+                option1 = "Ball out of ground", option2 = "Foul play", option3 = "Player closer to goal than ball and defenders", option4 = "Goal scored illegally",
+                correctAnswer = 3
+            ),
+
 
 
             )
