@@ -336,7 +336,12 @@ object QuizSeeder {
                 question = "What is it called when a player moves while bouncing the ball?",
                 option1 = "Passing", option2 = "Dribbling", option3 = "Shooting", option4 = "Blocking",
                 correctAnswer = 2
-            )
+            ),
+            QuestionEntity(
+                question = "How many quarters are there in a standard basketball game?",
+                option1 = "2", option2 = "3", option3 = "4", option4 = "5",
+                correctAnswer = 3
+            ),
 
 
 
