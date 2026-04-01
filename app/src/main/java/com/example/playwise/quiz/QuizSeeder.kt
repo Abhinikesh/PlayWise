@@ -407,6 +407,11 @@ object QuizSeeder {
                 option1 = "21", option2 = "25", option3 = "30", option4 = "15",
                 correctAnswer = 2
             ),
+            QuestionEntity(
+                question = "What is it called when a player jumps and hits the ball forcefully over the net?",
+                option1 = "Serve", option2 = "Block", option3 = "Spike", option4 = "Pass",
+                correctAnswer = 3
+            )
 
 
 
