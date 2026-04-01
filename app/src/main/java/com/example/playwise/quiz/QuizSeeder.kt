@@ -322,6 +322,12 @@ object QuizSeeder {
                 option1 = "8 feet", option2 = "9 feet", option3 = "10 feet", option4 = "11 feet",
                 correctAnswer = 3
             ),
+            QuestionEntity(
+                question = "How many points is a free throw worth?",
+                option1 = "1", option2 = "2", option3 = "3", option4 = "4",
+                correctAnswer = 1
+            ),
+
 
 
 
