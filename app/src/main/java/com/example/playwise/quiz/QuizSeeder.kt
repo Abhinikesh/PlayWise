@@ -382,6 +382,11 @@ object QuizSeeder {
                 option1 = "2.43m", option2 = "2.24m", option3 = "2.50m", option4 = "2.00m",
                 correctAnswer = 1
             ),
+            QuestionEntity(
+                question = "What is it called when the ball touches the ground on the opponent's side?",
+                option1 = "Foul", option2 = "Out", option3 = "Point", option4 = "Serve",
+                correctAnswer = 3
+            )
 
 
 
