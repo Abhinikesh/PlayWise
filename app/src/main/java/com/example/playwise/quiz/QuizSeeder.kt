@@ -352,6 +352,12 @@ object QuizSeeder {
                 option1 = "10 seconds", option2 = "24 seconds", option3 = "30 seconds", option4 = "60 seconds",
                 correctAnswer = 2
             ),
+            QuestionEntity(
+                question = "NBA stands for?",
+                option1 = "National Basketball Association", option2 = "New Basketball Alliance", option3 = "National Board Association", option4 = "None",
+                correctAnswer = 1
+            ),
+
 
 
 
