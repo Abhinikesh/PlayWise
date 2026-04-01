@@ -332,6 +332,11 @@ object QuizSeeder {
                 option1 = "1", option2 = "2", option3 = "3", option4 = "4",
                 correctAnswer = 3
             ),
+            QuestionEntity(
+                question = "What is it called when a player moves while bouncing the ball?",
+                option1 = "Passing", option2 = "Dribbling", option3 = "Shooting", option4 = "Blocking",
+                correctAnswer = 2
+            )
 
 
 
