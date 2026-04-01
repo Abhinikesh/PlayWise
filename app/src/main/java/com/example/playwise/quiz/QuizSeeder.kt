@@ -347,6 +347,12 @@ object QuizSeeder {
                 option1 = "Gets warning", option2 = "Gets bonus points", option3 = "Fouls out of the game", option4 = "Nothing",
                 correctAnswer = 3
             ),
+            QuestionEntity(
+                question = "What is the time limit to shoot the ball in basketball (shot clock)?",
+                option1 = "10 seconds", option2 = "24 seconds", option3 = "30 seconds", option4 = "60 seconds",
+                correctAnswer = 2
+            ),
+
 
 
 
