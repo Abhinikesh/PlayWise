@@ -397,6 +397,11 @@ object QuizSeeder {
                 option1 = "Attacker", option2 = "Defensive specialist", option3 = "Referee", option4 = "Captain",
                 correctAnswer = 2
             ),
+            QuestionEntity(
+                question = "How many sets are usually played in a volleyball match?",
+                option1 = "3", option2 = "4", option3 = "5", option4 = "6",
+                correctAnswer = 3
+            ),
 
 
 
