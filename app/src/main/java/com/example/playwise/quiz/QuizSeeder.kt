@@ -357,6 +357,11 @@ object QuizSeeder {
                 option1 = "National Basketball Association", option2 = "New Basketball Alliance", option3 = "National Board Association", option4 = "None",
                 correctAnswer = 1
             ),
+            QuestionEntity(
+                question = "What is it called when a player scores by jumping and putting the ball directly into the basket?",
+                option1 = "Layup", option2 = "Dribble", option3 = "Dunk", option4 = "Pass",
+                correctAnswer = 3
+            ),
 
 
 
