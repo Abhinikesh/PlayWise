@@ -327,6 +327,12 @@ object QuizSeeder {
                 option1 = "1", option2 = "2", option3 = "3", option4 = "4",
                 correctAnswer = 1
             ),
+            QuestionEntity(
+                question = "How many points is a shot from beyond the arc worth?",
+                option1 = "1", option2 = "2", option3 = "3", option4 = "4",
+                correctAnswer = 3
+            ),
+
 
 
 
