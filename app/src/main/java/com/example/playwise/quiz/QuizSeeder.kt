@@ -367,6 +367,11 @@ object QuizSeeder {
                 option1 = "5", option2 = "6", option3 = "7", option4 = "8",
                 correctAnswer = 2
             ),
+            QuestionEntity(
+                question = "What is the standard size of a volleyball court?",
+                option1 = "18m x 9m", option2 = "20m x 10m", option3 = "15m x 8m", option4 = "25m x 12m",
+                correctAnswer = 1
+            ),
 
 
 
