@@ -261,7 +261,18 @@ object QuizSeeder {
                 question = "What is the maximum number of overs per side in a One Day International (ODI) match?",
                 option1 = "20", option2 = "40", option3 = "50", option4 = "60",
                 correctAnswer = 3
-            )
+            ),
+            QuestionEntity(
+                question = "How many players are there in a football team on the field?",
+                option1 = "9", option2 = "10", option3 = "11", option4 = "12",
+                correctAnswer = 3
+            ),
+            QuestionEntity(
+                question = "What is the total duration of a standard football match?",
+                option1 = "60 minutes", option2 = "70 minutes", option3 = "80 minutes", option4 = "90 minutes",
+                correctAnswer = 4
+            ),
+
         )
     }
 }
