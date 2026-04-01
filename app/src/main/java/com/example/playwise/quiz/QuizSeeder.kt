@@ -342,6 +342,12 @@ object QuizSeeder {
                 option1 = "2", option2 = "3", option3 = "4", option4 = "5",
                 correctAnswer = 3
             ),
+            QuestionEntity(
+                question = "What happens when a player commits too many fouls?",
+                option1 = "Gets warning", option2 = "Gets bonus points", option3 = "Fouls out of the game", option4 = "Nothing",
+                correctAnswer = 3
+            ),
+
 
 
 
