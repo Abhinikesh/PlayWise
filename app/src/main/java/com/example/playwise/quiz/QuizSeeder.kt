@@ -372,6 +372,11 @@ object QuizSeeder {
                 option1 = "18m x 9m", option2 = "20m x 10m", option3 = "15m x 8m", option4 = "25m x 12m",
                 correctAnswer = 1
             ),
+            QuestionEntity(
+                question = "How many maximum hits are allowed per side?",
+                option1 = "2", option2 = "3", option3 = "4", option4 = "5",
+                correctAnswer = 2
+            ),
 
 
 
