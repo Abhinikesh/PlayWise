@@ -386,7 +386,12 @@ object QuizSeeder {
                 question = "What is it called when the ball touches the ground on the opponent's side?",
                 option1 = "Foul", option2 = "Out", option3 = "Point", option4 = "Serve",
                 correctAnswer = 3
-            )
+            ),
+            QuestionEntity(
+                question = "In volleyball, what is a 'serve'?",
+                option1 = "Starting the game by hitting the ball over the net", option2 = "Blocking the ball", option3 = "Spiking the ball", option4 = "Passing the ball",
+                correctAnswer = 1
+            ),
 
 
 
