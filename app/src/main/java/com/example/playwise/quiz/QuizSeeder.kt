@@ -272,7 +272,13 @@ object QuizSeeder {
                 option1 = "60 minutes", option2 = "70 minutes", option3 = "80 minutes", option4 = "90 minutes",
                 correctAnswer = 4
             ),
+            QuestionEntity(
+                question = "Which player can use hands during the match?",
+                option1 = "Defender", option2 = "Midfielder", option3 = "Goalkeeper", option4 = "Striker",
+                correctAnswer = 3
+            ),
 
-        )
+
+            )
     }
 }
