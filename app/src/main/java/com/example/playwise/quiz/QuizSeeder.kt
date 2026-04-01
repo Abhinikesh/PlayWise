@@ -302,6 +302,11 @@ object QuizSeeder {
                 option1 = "Ball out of ground", option2 = "Foul play", option3 = "Player closer to goal than ball and defenders", option4 = "Goal scored illegally",
                 correctAnswer = 3
             ),
+            QuestionEntity(
+                question = "Which country won the FIFA World Cup 2018?",
+                option1 = "Germany", option2 = "Brazil", option3 = "France", option4 = "Argentina",
+                correctAnswer = 3
+            ),
 
 
 
