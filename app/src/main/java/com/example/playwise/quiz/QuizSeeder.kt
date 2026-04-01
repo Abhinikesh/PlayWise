@@ -392,6 +392,11 @@ object QuizSeeder {
                 option1 = "Starting the game by hitting the ball over the net", option2 = "Blocking the ball", option3 = "Spiking the ball", option4 = "Passing the ball",
                 correctAnswer = 1
             ),
+            QuestionEntity(
+                question = "What is the role of a libero in volleyball?",
+                option1 = "Attacker", option2 = "Defensive specialist", option3 = "Referee", option4 = "Captain",
+                correctAnswer = 2
+            ),
 
 
 
