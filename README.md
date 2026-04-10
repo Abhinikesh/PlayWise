@@ -118,42 +118,42 @@ The app covers **8 major sports**, provides interactive quizzes with persistent 
 ---
 
 ### ⭐ Favorites
-<img src="screenshots/Favorites.png" width="260" alt="Favorites Screen"/>
+<img src="Favorites.png" width="260" alt="Favorites Screen"/>
 
 > All your starred sports in one place. Each card gives you instant access to Details, Watch, and Quiz.
 
 ---
 
 ### 🏟️ Ground Information
-<img src="screenshots/Ground.png" width="260" alt="Ground Screen"/>
+<img src="Ground.png" width="260" alt="Ground Screen"/>
 
 > Explore world-famous stadiums — HPCA Dharamshala, Lord's Cricket Ground, MCG — with capacity and match history.
 
 ---
 
 ### 🧠 Interactive Quiz
-<img src="screenshots/Quiz.png" width="260" alt="Quiz Screen"/>
+<img src="Quiz.png" width="260" alt="Quiz Screen"/>
 
 > Test your sports knowledge with multiple-choice questions. Track your current question progress (e.g., Question 3/5) and review your past results anytime.
 
 ---
 
 ### 🏏 Sport Detail Page
-<img src="screenshots/Sports_wise_details.png" width="260" alt="Sport Detail Screen"/>
+<img src="Sports_wise_details.png" width="260" alt="Sport Detail Screen"/>
 
 > Every sport has its own hub — Rules, Ground Info, Tips, Watch Video, and Live Score all in one place.
 
 ---
 
 ### 🎟️ Tickets
-<img src="screenshots/Tickets.png" width="260" alt="Tickets Screen"/>
+<img src="Tickets.png" width="260" alt="Tickets Screen"/>
 
 > Trending matches, popular leagues (IPL, ISL), and nearby stadium tickets — with calendar integration for upcoming fixtures.
 
 ---
 
 ### 📺 Video Tutorials
-<img src="screenshots/Video_Tutorials.png" width="260" alt="Video Tutorials Screen"/>
+<img src="Video_Tutorials.png" width="260" alt="Video Tutorials Screen"/>
 
 > Watch curated tutorials — Batting, Bowling, Fielding, Rules Explanation, and Highlights — directly from inside the app.
 
@@ -218,7 +218,7 @@ PlayWise follows the **MVVM (Model-View-ViewModel)** architecture pattern with J
 
 1. **Clone the repository**
 ```bash
-   git clone https://github.com/YOUR_USERNAME/PlayWise.git
+   git clone https://github.com/Abhinikesh/PlayWise.git
    cd PlayWise
 ```
 
@@ -332,8 +332,8 @@ copies or substantial portions of the Software.
 
 **Abhinikesh Kumar**
 
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/YOUR_USERNAME)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/YOUR_PROFILE)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Abhinikesh)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/abhinikesh-k-223a08336/)
 
 *Built with ❤️ using Kotlin & Android Jetpack*
 
