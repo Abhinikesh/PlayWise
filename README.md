@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="app/src/main/ic_launcher-playstore.png" width="120" alt="PlayWise Logo" />
+<img src="playwise_logo.png" width="120" alt="PlayWise Logo" />
 
 # 🏆 PlayWise
 
