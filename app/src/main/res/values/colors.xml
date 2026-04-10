@@ -11,4 +11,5 @@
 
     <!-- A vibrant, modern 'Deep Sky Blue' that is very attractive and feels premium/human -->
     <color name="button_blue">#4D96FF</color>
+    <color name="ic_launcher_background">#FFFFFF</color>
 </resources>
