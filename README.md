@@ -111,7 +111,7 @@ The app covers **8 major sports**, provides interactive quizzes with persistent 
 <div align="center">
 
 ### 🏠 Home — Sports Dashboard
-<img src="screenshots/Home.png" width="260" alt="Home Screen"/>
+<img src="Home.png" width="260" alt="Home Screen"/>
 
 > Browse all 8 sports from a clean searchable grid. Toggle favorites with the star icon. Switch between light and dark themes from the toolbar.
 
