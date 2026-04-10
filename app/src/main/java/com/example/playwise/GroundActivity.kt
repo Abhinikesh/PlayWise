@@ -40,11 +40,11 @@ class GroundActivity : AppCompatActivity() {
                 Ground(
                     "Lord's Cricket Ground",
                     "London - Home of Cricket\n🏟 Capacity: 80,000 seats\n🏏 Matches Played: 76",
-                    R.drawable.cricket),
+                    R.drawable.lords_crc_grd),
                 Ground(
                     "MCG",
                     "Melbourne - 100,000+ capacity",
-                    R.drawable.cricket),
+                    R.drawable.mcg),
                 Ground(
                     "Eden Gardens",
                     "Kolkata - Historic stadium",

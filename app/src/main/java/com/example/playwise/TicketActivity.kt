@@ -30,9 +30,9 @@ class TicketActivity : AppCompatActivity() {
 
     private fun setupTrendingMatches() {
         val trendingMatches = listOf(
-            Match("India vs Australia", "Cricket", "Oct 24, 2023 | 7:30 PM", "Wankhede Stadium", "india+vs+australia"),
-            Match("Man City vs Arsenal", "Football", "Oct 28, 2023 | 9:00 PM", "Etihad Stadium", "man+city+vs+arsenal"),
-            Match("Lakers vs Warriors", "Basketball", "Nov 02, 2023 | 8:00 AM", "Chase Center", "lakers+vs+warriors")
+            Match("India vs Australia", "Cricket", "Jan 24, 2027 | 9:00 AM", "Wankhede Stadium", "india+vs+australia"),
+            Match("Man City vs Arsenal", "Football", "Oct 28, 2026 | 9:00 PM", "Etihad Stadium", "man+city+vs+arsenal"),
+            Match("Lakers vs Warriors", "Basketball", "Nov 02, 2026 | 8:00 AM", "Chase Center", "lakers+vs+warriors")
         )
 
         val adapter = TrendingMatchAdapter(trendingMatches) { match ->
@@ -74,9 +74,9 @@ class TicketActivity : AppCompatActivity() {
 
     private fun setupUpcomingMatches() {
         val upcomingMatches = listOf(
-            Match("Real Madrid vs Barcelona", "Football", "Dec 10, 2023", "Santiago Bernabéu", "el+clasico"),
-            Match("Ind vs Eng Test", "Cricket", "Jan 25, 2024", "Hyderabad", "india+vs+england+test"),
-            Match("Wimbledon Finals", "Tennis", "July 14, 2024", "London", "wimbledon+finals")
+            Match("Real Madrid vs Barcelona", "Football", "Dec 10, 2026", "Santiago Bernabéu", "el+clasico"),
+            Match("Ind vs Eng Test", "Cricket", "July 1, 2026", "Hyderabad", "india+vs+england+test"),
+            Match("Wimbledon Finals", "Tennis", "July 14, 2026", "London", "wimbledon+finals")
         )
 
         val adapter = UpcomingMatchAdapter(upcomingMatches) { match ->
