@@ -1,14 +1,13 @@
 package com.example.playwise
 
 import android.graphics.Color
-import android.graphics.Typeface
 import android.os.Bundle
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.graphics.toColorInt
 import com.example.playwise.databinding.ActivityRulesBinding
 import com.google.android.material.card.MaterialCardView
+import com.google.android.material.color.MaterialColors
 
 class RulesActivity : AppCompatActivity() {
 
@@ -44,7 +43,7 @@ class RulesActivity : AppCompatActivity() {
                 }
                 radius = 24f // More rounded corners
                 cardElevation = 8f // More pronounced shadow
-                setCardBackgroundColor(Color.WHITE)
+                setCardBackgroundColor(MaterialColors.getColor(this, com.google.android.material.R.attr.colorSurface, Color.WHITE))
                 setContentPadding(48, 48, 48, 48) // More internal padding
             }
 
@@ -56,8 +55,8 @@ class RulesActivity : AppCompatActivity() {
             val titleView = TextView(this).apply {
                 text = title
                 textSize = 22f
-                setTypeface(null, Typeface.BOLD)
-                setTextColor("#212121".toColorInt())
+                setTypeface(null, android.graphics.Typeface.BOLD)
+                setTextColor(MaterialColors.getColor(this, com.google.android.material.R.attr.colorOnSurface, Color.BLACK))
                 setPadding(0, 0, 0, 24)
             }
             cardContent.addView(titleView)
@@ -66,7 +65,7 @@ class RulesActivity : AppCompatActivity() {
             val contentView = TextView(this).apply {
                 text = content
                 textSize = 16f
-                setTextColor("#424242".toColorInt())
+                setTextColor(MaterialColors.getColor(this, com.google.android.material.R.attr.colorOnSurface, Color.BLACK))
                 setLineSpacing(12f, 1f) // Better readability
             }
             cardContent.addView(contentView)
@@ -357,6 +356,46 @@ class RulesActivity : AppCompatActivity() {
                         "• Backs: Speed and scoring\n\n" +
 
                         "Rugby builds strength, teamwork, and endurance."
+            )
+            "golf" -> listOf(
+                "Objective" to "The objective of golf is to hit a ball with a club from a starting point (the tee) into a hole in as few strokes as possible.",
+                "Scoring" to "• Par: The number of strokes an expert golfer is expected to need to complete a hole.\n• Birdie: 1 stroke under par.\n• Eagle: 2 strokes under par.\n• Bogey: 1 stroke over par.\n• The player with the lowest total score wins.",
+                "Key Rules" to "• Play the ball as it lies.\n• Play the course as you find it.\n• If you can't do either, do what is fair.\n• Out of bounds results in a penalty stroke and a replay from the original spot."
+            )
+            "handball" -> listOf(
+                "Objective" to "Two teams of 7 players aim to throw a ball into the opponent's goal. The team with the most goals wins.",
+                "Gameplay" to "• Players can take up to 3 steps with the ball and hold it for up to 3 seconds.\n• Dribbling is allowed but 'double dribble' is a foul.\n• No players except the goalkeeper are allowed inside the goal area (6m line).",
+                "Match Structure" to "• Two halves of 30 minutes each.\n• Fast-paced with high-scoring games."
+            )
+            "boxing" -> listOf(
+                "Objective" to "Two competitors (boxers) fight using their fists, aiming to score points or achieve a knockout (KO).",
+                "Scoring" to "• Points are awarded by judges based on clean hits, effective aggression, and ring generalship.\n• A 10-point must system is used for each round.",
+                "Key Rules" to "• Hits must be above the belt and with the knuckles.\n• No hitting the back of the head, kidneys, or after the bell.\n• A 'standing eight count' may be given if a boxer is dazed."
+            )
+            "karate" -> listOf(
+                "Objective" to "A martial art involving punching, kicking, and striking. In competition (Kumite), the goal is to score points against an opponent.",
+                "Scoring" to "• Ippon (3 points): Jodan kicks or any scoring technique on a fallen opponent.\n• Waza-ari (2 points): Chudan kicks.\n• Yuko (1 point): Punches to the body or head.",
+                "Duration" to "Bouts typically last 2 to 3 minutes. The first to reach an 8-point lead or have more points when time expires wins."
+            )
+            "wrestling" -> listOf(
+                "Objective" to "The primary goal is to pin the opponent's shoulders to the mat (a fall) or outscore them through technical moves.",
+                "Scoring" to "• Takedowns, reversals, exposures, and escapes earn points.\n• Technical Superiority: Match ends early if a point gap (usually 8-10 points) is reached.",
+                "Styles" to "• Freestyle: Allows the use of legs in offense and defense.\n• Greco-Roman: Forbids the use of legs; all attacks must be above the waist."
+            )
+            "formula 1" -> listOf(
+                "Objective" to "High-speed auto racing where drivers compete to finish a set number of laps (Grand Prix) in the shortest time.",
+                "Points System" to "• Points are awarded to the top 10 finishers (25 for 1st, 18 for 2nd, etc.).\n• An extra point is awarded for the fastest lap if the driver finishes in the top 10.",
+                "Flags" to "• Yellow: Danger, no overtaking.\n• Blue: Allow a faster car to lap you.\n• Checkered: Race finished."
+            )
+            "shooting" -> listOf(
+                "Objective" to "Competitors use firearms (air rifles, pistols) to shoot at stationary or moving targets. Precision and accuracy are key.",
+                "Formats" to "• Rifle: Shot from prone, kneeling, or standing positions.\n• Pistol: Typically shot one-handed from a standing position.\n• Shotgun (Skeet/Trap): Shooting moving clay targets.",
+                "Scoring" to "Targets are divided into concentric rings; hitting closer to the center (the 'bullseye') earns more points."
+            )
+            "kabaddi" -> listOf(
+                "Objective" to "A contact sport where a 'raider' runs into the opponent's half, tags as many defenders as possible, and returns to their half without being tackled, all while chanting 'Kabaddi'.",
+                "Scoring" to "• 1 point for each defender tagged.\n• Defenders earn 1 point for successfully tackling the raider.\n• Bonus point available if the raider crosses the 'bonus line' when 6+ defenders are present.",
+                "Key Rules" to "• The raider must hold their breath and keep chanting 'Kabaddi'.\n• Touched defenders are temporarily 'out' and revived when their team scores points."
             )
             else -> listOf("Error" to "Rules for $sport are not available yet.")
         }

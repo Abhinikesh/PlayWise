@@ -5,7 +5,7 @@
     android:id="@+id/quizRoot"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#1A237E"
+    android:background="?android:attr/windowBackground"
     tools:context=".quiz.QuizActivity">
 
     <!-- Background Image with Overlay -->
@@ -21,7 +21,7 @@
         android:id="@+id/bgOverlay"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/quiz_gradient_bg"
+        android:background="?android:attr/windowBackground"
         android:alpha="0.8" />
 
     <com.google.android.material.appbar.AppBarLayout
@@ -37,8 +37,7 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             app:navigationIcon="@drawable/ic_back_white"
-            app:title="Quiz"
-            app:titleTextColor="@android:color/white" />
+            app:title="Quiz" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -62,19 +61,15 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginBottom="24dp"
                 android:text="Question 1/5"
-                android:textColor="@android:color/white"
+                android:textColor="?android:attr/textColorPrimary"
                 android:textSize="20sp"
-                android:textStyle="bold"
-                android:shadowColor="#40000000"
-                android:shadowDx="2"
-                android:shadowDy="2"
-                android:shadowRadius="4" />
+                android:textStyle="bold" />
 
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/questionCard"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:cardBackgroundColor="#FFFFFF"
+                app:cardBackgroundColor="?attr/colorSurface"
                 app:cardCornerRadius="20dp"
                 app:cardElevation="12dp">
 
@@ -88,7 +83,7 @@
                         android:id="@+id/tvQuestion"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textColor="#212121"
+                        android:textColor="?android:attr/textColorPrimary"
                         android:textSize="22sp"
                         android:textStyle="bold"
                         android:lineSpacingExtra="4dp"
@@ -108,7 +103,7 @@
                             android:background="@drawable/option_selector_bg"
                             android:button="@null"
                             android:padding="16dp"
-                            android:textColor="#424242"
+                            android:textColor="?android:attr/textColorPrimary"
                             android:textSize="17sp"
                             tools:text="20 Yards" />
 
@@ -120,7 +115,7 @@
                             android:background="@drawable/option_selector_bg"
                             android:button="@null"
                             android:padding="16dp"
-                            android:textColor="#424242"
+                            android:textColor="?android:attr/textColorPrimary"
                             android:textSize="17sp"
                             tools:text="22 Yards" />
 
@@ -132,7 +127,7 @@
                             android:background="@drawable/option_selector_bg"
                             android:button="@null"
                             android:padding="16dp"
-                            android:textColor="#424242"
+                            android:textColor="?android:attr/textColorPrimary"
                             android:textSize="17sp"
                             tools:text="24 Yards" />
 
@@ -143,7 +138,7 @@
                             android:background="@drawable/option_selector_bg"
                             android:button="@null"
                             android:padding="16dp"
-                            android:textColor="#424242"
+                            android:textColor="?android:attr/textColorPrimary"
                             android:textSize="17sp"
                             tools:text="25 Yards" />
 

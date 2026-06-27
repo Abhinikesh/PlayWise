@@ -35,7 +35,6 @@
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                app:logo="@android:drawable/ic_menu_gallery"
                 app:popupTheme="@style/ThemeOverlay.MaterialComponents.Light"
                 app:title="Play Wise" />
 
@@ -67,7 +66,7 @@
                     android:alignmentMode="alignMargins"
                     android:columnCount="2"
                     android:columnOrderPreserved="false"
-                    android:rowCount="4"
+                    android:rowCount="8"
                     android:useDefaultMargins="true">
 
                     <!-- Cricket -->
@@ -462,19 +461,411 @@
                         </FrameLayout>
                     </com.google.android.material.card.MaterialCardView>
 
+                    <!-- Golf -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardGolf"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1"
+                        android:clickable="true"
+                        android:focusable="true"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="6dp"
+                        app:cardUseCompatPadding="true">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="150dp"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:padding="12dp">
+
+                                <ImageView
+                                    android:layout_width="122dp"
+                                    android:layout_height="100dp"
+                                    android:contentDescription="Golf"
+                                    android:src="@drawable/rugby_n" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingTop="8dp"
+                                    android:text="Golf"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <ImageButton
+                                android:id="@+id/btnFavGolf"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:layout_gravity="top|end"
+                                android:background="?attr/selectableItemBackgroundBorderless"
+                                android:contentDescription="Favorite"
+                                android:padding="12dp"
+                                android:src="@android:drawable/btn_star_big_off" />
+                        </FrameLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- Handball -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardHandball"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1"
+                        android:clickable="true"
+                        android:focusable="true"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="6dp"
+                        app:cardUseCompatPadding="true">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="150dp"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:padding="12dp">
+
+                                <ImageView
+                                    android:layout_width="122dp"
+                                    android:layout_height="100dp"
+                                    android:contentDescription="Handball"
+                                    android:src="@drawable/rugby_n" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingTop="8dp"
+                                    android:text="Handball"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <ImageButton
+                                android:id="@+id/btnFavHandball"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:layout_gravity="top|end"
+                                android:background="?attr/selectableItemBackgroundBorderless"
+                                android:contentDescription="Favorite"
+                                android:padding="12dp"
+                                android:src="@android:drawable/btn_star_big_off" />
+                        </FrameLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- Boxing -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardBoxing"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1"
+                        android:clickable="true"
+                        android:focusable="true"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="6dp"
+                        app:cardUseCompatPadding="true">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="150dp"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:padding="12dp">
+
+                                <ImageView
+                                    android:layout_width="122dp"
+                                    android:layout_height="100dp"
+                                    android:contentDescription="Boxing"
+                                    android:src="@drawable/rugby_n" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingTop="8dp"
+                                    android:text="Boxing"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <ImageButton
+                                android:id="@+id/btnFavBoxing"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:layout_gravity="top|end"
+                                android:background="?attr/selectableItemBackgroundBorderless"
+                                android:contentDescription="Favorite"
+                                android:padding="12dp"
+                                android:src="@android:drawable/btn_star_big_off" />
+                        </FrameLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- Karate -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardKarate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1"
+                        android:clickable="true"
+                        android:focusable="true"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="6dp"
+                        app:cardUseCompatPadding="true">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="150dp"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:padding="12dp">
+
+                                <ImageView
+                                    android:layout_width="122dp"
+                                    android:layout_height="100dp"
+                                    android:contentDescription="Karate"
+                                    android:src="@drawable/rugby_n" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingTop="8dp"
+                                    android:text="Karate"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <ImageButton
+                                android:id="@+id/btnFavKarate"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:layout_gravity="top|end"
+                                android:background="?attr/selectableItemBackgroundBorderless"
+                                android:contentDescription="Favorite"
+                                android:padding="12dp"
+                                android:src="@android:drawable/btn_star_big_off" />
+                        </FrameLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- Wrestling -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardWrestling"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1"
+                        android:clickable="true"
+                        android:focusable="true"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="6dp"
+                        app:cardUseCompatPadding="true">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="150dp"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:padding="12dp">
+
+                                <ImageView
+                                    android:layout_width="122dp"
+                                    android:layout_height="100dp"
+                                    android:contentDescription="Wrestling"
+                                    android:src="@drawable/rugby_n" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingTop="8dp"
+                                    android:text="Wrestling"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <ImageButton
+                                android:id="@+id/btnFavWrestling"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:layout_gravity="top|end"
+                                android:background="?attr/selectableItemBackgroundBorderless"
+                                android:contentDescription="Favorite"
+                                android:padding="12dp"
+                                android:src="@android:drawable/btn_star_big_off" />
+                        </FrameLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- Formula 1 -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardFormula1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1"
+                        android:clickable="true"
+                        android:focusable="true"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="6dp"
+                        app:cardUseCompatPadding="true">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="150dp"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:padding="12dp">
+
+                                <ImageView
+                                    android:layout_width="122dp"
+                                    android:layout_height="100dp"
+                                    android:contentDescription="Formula 1"
+                                    android:src="@drawable/rugby_n" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingTop="8dp"
+                                    android:text="Formula 1"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <ImageButton
+                                android:id="@+id/btnFavFormula1"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:layout_gravity="top|end"
+                                android:background="?attr/selectableItemBackgroundBorderless"
+                                android:contentDescription="Favorite"
+                                android:padding="12dp"
+                                android:src="@android:drawable/btn_star_big_off" />
+                        </FrameLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- Shooting -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardShooting"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1"
+                        android:clickable="true"
+                        android:focusable="true"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="6dp"
+                        app:cardUseCompatPadding="true">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="150dp"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:padding="12dp">
+
+                                <ImageView
+                                    android:layout_width="122dp"
+                                    android:layout_height="100dp"
+                                    android:contentDescription="Shooting"
+                                    android:src="@drawable/rugby_n" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingTop="8dp"
+                                    android:text="Shooting"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <ImageButton
+                                android:id="@+id/btnFavShooting"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:layout_gravity="top|end"
+                                android:background="?attr/selectableItemBackgroundBorderless"
+                                android:contentDescription="Favorite"
+                                android:padding="12dp"
+                                android:src="@android:drawable/btn_star_big_off" />
+                        </FrameLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- Kabaddi -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardKabaddi"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1"
+                        android:clickable="true"
+                        android:focusable="true"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="6dp"
+                        app:cardUseCompatPadding="true">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="150dp"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:padding="12dp">
+
+                                <ImageView
+                                    android:layout_width="122dp"
+                                    android:layout_height="100dp"
+                                    android:contentDescription="Kabaddi"
+                                    android:src="@drawable/rugby_n" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingTop="8dp"
+                                    android:text="Kabaddi"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <ImageButton
+                                android:id="@+id/btnFavKabaddi"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:layout_gravity="top|end"
+                                android:background="?attr/selectableItemBackgroundBorderless"
+                                android:contentDescription="Favorite"
+                                android:padding="12dp"
+                                android:src="@android:drawable/btn_star_big_off" />
+                        </FrameLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
                 </GridLayout>
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:layout_marginTop="24dp"
-                    android:background="@android:color/darker_gray" />
+                    android:background="?android:attr/listDivider" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="16dp"
-                    android:text="© 2026 PlayWise \nDeveloped by Abhinikesh"
+                    android:text="© 2026 PlayWise \nMade with ❤️ for Sports Fans"
                     android:textAlignment="center"
                     android:textSize="13sp"
                     android:textColor="?android:attr/textColorSecondary"/>

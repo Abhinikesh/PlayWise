@@ -6,6 +6,8 @@ import android.content.Intent
 import android.graphics.Color
 import android.net.Uri
 import android.os.Bundle
+import android.view.View
+import android.view.animation.AccelerateDecelerateInterpolator
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AlertDialog
@@ -14,7 +16,9 @@ import androidx.core.content.ContextCompat
 import com.example.playwise.FavoritesActivity
 import com.example.playwise.MainActivity
 import com.example.playwise.R
+import com.example.playwise.TicketActivity
 import com.example.playwise.databinding.ActivityQuizBinding
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class QuizActivity : AppCompatActivity() {
 
@@ -63,36 +67,85 @@ class QuizActivity : AppCompatActivity() {
         binding.toolbar.setNavigationOnClickListener { finish() }
     }
 
-    private fun setupBottomNavigation() {
+    override fun onResume() {
+        super.onResume()
         binding.bottomNavigation.selectedItemId = R.id.nav_quiz
+        binding.bottomNavigation.post {
+            animateBottomNavigationItem(binding.bottomNavigation, R.id.nav_quiz)
+        }
+    }
+
+    override fun onNewIntent(intent: Intent) {
+        super.onNewIntent(intent)
+        setIntent(intent)
+    }
+
+    private fun setupBottomNavigation() {
         binding.bottomNavigation.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.nav_home -> {
                     startActivity(Intent(this, MainActivity::class.java).apply {
                         flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
                     })
-                    true
+                    false
                 }
                 R.id.nav_search -> {
                     startActivity(Intent(this, MainActivity::class.java).apply {
                         flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
+                        putExtra("open_search", true)
                     })
-                    // MainActivity can handle expanding search if we pass an extra or use a specific action
-                    true
+                    false
                 }
                 R.id.nav_live -> {
                     val url = "https://www.google.com/search?q=live+sports+score"
                     startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url)))
                     false
                 }
+                R.id.nav_tickets -> {
+                    startActivity(Intent(this, TicketActivity::class.java).apply {
+                        flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
+                    })
+                    false
+                }
                 R.id.nav_favorites -> {
                     startActivity(Intent(this, FavoritesActivity::class.java).apply {
                         flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
                     })
+                    false
+                }
+                R.id.nav_quiz -> {
+                    animateBottomNavigationItem(binding.bottomNavigation, item.itemId)
                     true
                 }
-                R.id.nav_quiz -> true
                 else -> false
+            }
+        }
+    }
+
+    private fun animateBottomNavigationItem(bottomNav: BottomNavigationView, itemId: Int) {
+        val menu = bottomNav.menu
+        for (i in 0 until menu.size()) {
+            val id = menu.getItem(i).itemId
+            val itemView = bottomNav.findViewById<View>(id) ?: continue
+            
+            val iconView = itemView.findViewById<View>(com.google.android.material.R.id.navigation_bar_item_icon_view)
+            
+            if (id == itemId) {
+                iconView?.animate()
+                    ?.scaleX(1.2f)
+                    ?.scaleY(1.2f)
+                    ?.alpha(1.0f)
+                    ?.setDuration(200)
+                    ?.setInterpolator(AccelerateDecelerateInterpolator())
+                    ?.start()
+            } else {
+                iconView?.animate()
+                    ?.scaleX(1.0f)
+                    ?.scaleY(1.0f)
+                    ?.alpha(0.8f)
+                    ?.setDuration(200)
+                    ?.setInterpolator(AccelerateDecelerateInterpolator())
+                    ?.start()
             }
         }
     }

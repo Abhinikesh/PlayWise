@@ -42,6 +42,45 @@ object VideoRepository {
                 VideoItem("Tackling Technique", "https://www.youtube.com/watch?v=uQ9iQe_-aWw", R.drawable.ic_field),
                 VideoItem("Rules of Rugby", "https://www.youtube.com/watch?v=smnuRhNtT2E", R.drawable.ic_book)
             )
+            "golf" -> listOf(
+                VideoItem("Golf Swing for Beginners", "https://www.youtube.com/watch?v=RXiS99Xp4kI", R.drawable.ic_play),
+                VideoItem("Putting Basics", "https://www.youtube.com/watch?v=mD_37I8n0jY", R.drawable.ic_play),
+                VideoItem("Rules of Golf", "https://www.youtube.com/watch?v=6m89KREq7O4", R.drawable.ic_book)
+            )
+            "handball" -> listOf(
+                VideoItem("Handball Basics", "https://www.youtube.com/watch?v=680XjU5jV0g", R.drawable.ic_ball),
+                VideoItem("Rules of Handball", "https://www.youtube.com/watch?v=pDofj4pI-yY", R.drawable.ic_book)
+            )
+            "boxing" -> listOf(
+                VideoItem("Boxing Fundamentals", "https://www.youtube.com/watch?v=u4v_86E9vG8", R.drawable.ic_play),
+                VideoItem("Boxing Footwork", "https://www.youtube.com/watch?v=fXW9P9fW9xU", R.drawable.ic_field),
+                VideoItem("Rules of Boxing", "https://www.youtube.com/watch?v=ZfJsh5G85pI", R.drawable.ic_book)
+            )
+            "karate" -> listOf(
+                VideoItem("Basic Karate Techniques", "https://www.youtube.com/watch?v=vVEnNfTqj9M", R.drawable.ic_play),
+                VideoItem("Karate Kata Tutorial", "https://www.youtube.com/watch?v=qM2nscTfHnI", R.drawable.ic_play),
+                VideoItem("Rules of Karate", "https://www.youtube.com/watch?v=3u_C_q4z0iU", R.drawable.ic_book)
+            )
+            "wrestling" -> listOf(
+                VideoItem("Wrestling Takedowns", "https://www.youtube.com/watch?v=Qf4rWv9Z9Xo", R.drawable.ic_field),
+                VideoItem("Wrestling Basics", "https://www.youtube.com/watch?v=2r7u_m-q3I4", R.drawable.ic_play),
+                VideoItem("Rules of Wrestling", "https://www.youtube.com/watch?v=5z60eXz_0j4", R.drawable.ic_book)
+            )
+            "formula 1" -> listOf(
+                VideoItem("F1 Driving Techniques", "https://www.youtube.com/watch?v=N807-u0_7-k", R.drawable.ic_play),
+                VideoItem("F1 Pit Stop Explained", "https://www.youtube.com/watch?v=7VCAL3vLDpw", R.drawable.ic_play),
+                VideoItem("Rules of F1", "https://www.youtube.com/watch?v=E6xP_6I5vEw", R.drawable.ic_book)
+            )
+            "shooting" -> listOf(
+                VideoItem("Shooting Stance Basics", "https://www.youtube.com/watch?v=YfM4nI_9z0E", R.drawable.ic_play),
+                VideoItem("Precision Shooting", "https://www.youtube.com/watch?v=vVEnNfTqj9M", R.drawable.ic_play),
+                VideoItem("Rules of Sport Shooting", "https://www.youtube.com/watch?v=zE6e89_6e8Q", R.drawable.ic_book)
+            )
+            "kabaddi" -> listOf(
+                VideoItem("Kabaddi Raiding Skills", "https://www.youtube.com/watch?v=u_V1m3_z3oA", R.drawable.ic_play),
+                VideoItem("Kabaddi Defense Skills", "https://www.youtube.com/watch?v=KzX9pC1pZ7o", R.drawable.ic_field),
+                VideoItem("Rules of Kabaddi", "https://www.youtube.com/watch?v=680XjU5jV0g", R.drawable.ic_book)
+            )
             else -> emptyList()
         }
     }

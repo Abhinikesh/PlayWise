@@ -5,33 +5,42 @@ import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.view.animation.AccelerateDecelerateInterpolator
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.playwise.quiz.QuizActivity
+import androidx.appcompat.widget.Toolbar
+import com.example.playwise.databinding.ActivityFavoritesBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.button.MaterialButton
 
 class FavoritesActivity : AppCompatActivity() {
 
+    private lateinit var binding: ActivityFavoritesBinding
     private lateinit var rvFavorites: RecyclerView
     private lateinit var adapter: FavoriteAdapter
-    private lateinit var tvFavCount: TextView
+    private lateinit var toolbar: Toolbar
     private lateinit var emptyState: View
     private lateinit var btnExplore: MaterialButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_favorites)
+        binding = ActivityFavoritesBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         // Initialize Views
-        rvFavorites = findViewById(R.id.rvFavorites)
-        tvFavCount = findViewById(R.id.tvFavCount)
-        emptyState = findViewById(R.id.emptyState)
-        btnExplore = findViewById(R.id.btnExplore)
+        rvFavorites = binding.rvFavorites
+        toolbar = binding.toolbar
+        emptyState = binding.emptyState
+        btnExplore = binding.btnExplore
+
+        setSupportActionBar(toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        toolbar.setNavigationOnClickListener { finish() }
 
         setupRecyclerView()
         setupBottomNavigation()
@@ -48,6 +57,17 @@ class FavoritesActivity : AppCompatActivity() {
         super.onResume()
         // Always load fresh data when the screen becomes visible
         loadFavorites()
+        
+        val bottomNav = findViewById<BottomNavigationView>(R.id.bottom_navigation)
+        bottomNav.selectedItemId = R.id.nav_favorites
+        bottomNav.post {
+            animateBottomNavigationItem(bottomNav, R.id.nav_favorites)
+        }
+    }
+
+    override fun onNewIntent(intent: Intent) {
+        super.onNewIntent(intent)
+        setIntent(intent)
     }
 
     private fun setupRecyclerView() {
@@ -72,7 +92,7 @@ class FavoritesActivity : AppCompatActivity() {
         adapter.updateData(favList)
         
         val countText = if (favList.size == 1) "1 Sport saved" else "${favList.size} Sports saved"
-        tvFavCount.text = countText
+        supportActionBar?.subtitle = countText
         
         if (favList.isEmpty()) {
             emptyState.visibility = View.VISIBLE
@@ -130,38 +150,41 @@ class FavoritesActivity : AppCompatActivity() {
 
     private fun setupBottomNavigation() {
         val bottomNav = findViewById<BottomNavigationView>(R.id.bottom_navigation)
-        bottomNav.selectedItemId = R.id.nav_favorites
-        
-        bottomNav.post {
-            animateBottomNavigationItem(bottomNav, R.id.nav_favorites)
-        }
-
         bottomNav.setOnItemSelectedListener { item ->
-            animateBottomNavigationItem(bottomNav, item.itemId)
             when (item.itemId) {
                 R.id.nav_home -> {
                     startActivity(Intent(this, MainActivity::class.java).apply {
                         flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
                     })
-                    true
+                    false
                 }
                 R.id.nav_search -> {
                     startActivity(Intent(this, MainActivity::class.java).apply {
                         flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
+                        putExtra("open_search", true)
                     })
-                    true
+                    false
                 }
                 R.id.nav_live -> {
                     val url = "https://www.google.com/search?q=live+sports+score"
                     startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url)))
                     false
                 }
-                R.id.nav_favorites -> true
+                R.id.nav_tickets -> {
+                    startActivity(Intent(this, TicketActivity::class.java).apply {
+                        flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
+                    })
+                    false
+                }
+                R.id.nav_favorites -> {
+                    animateBottomNavigationItem(bottomNav, item.itemId)
+                    true
+                }
                 R.id.nav_quiz -> {
                     startActivity(Intent(this, QuizActivity::class.java).apply {
                         flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
                     })
-                    true
+                    false
                 }
                 else -> false
             }
@@ -172,18 +195,25 @@ class FavoritesActivity : AppCompatActivity() {
         val menu = bottomNav.menu
         for (i in 0 until menu.size()) {
             val id = menu.getItem(i).itemId
-            val view = bottomNav.findViewById<View>(id)
+            val itemView = bottomNav.findViewById<View>(id) ?: continue
+            
+            val iconView = itemView.findViewById<View>(com.google.android.material.R.id.navigation_bar_item_icon_view)
+            
             if (id == itemId) {
-                view?.animate()
-                    ?.scaleX(1.15f)
-                    ?.scaleY(1.15f)
+                iconView?.animate()
+                    ?.scaleX(1.2f)
+                    ?.scaleY(1.2f)
+                    ?.alpha(1.0f)
                     ?.setDuration(200)
+                    ?.setInterpolator(AccelerateDecelerateInterpolator())
                     ?.start()
             } else {
-                view?.animate()
+                iconView?.animate()
                     ?.scaleX(1.0f)
                     ?.scaleY(1.0f)
+                    ?.alpha(0.8f)
                     ?.setDuration(200)
+                    ?.setInterpolator(AccelerateDecelerateInterpolator())
                     ?.start()
             }
         }

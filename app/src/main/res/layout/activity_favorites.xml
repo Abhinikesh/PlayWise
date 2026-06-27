@@ -4,35 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F5F7FA">
+    android:background="?android:attr/windowBackground">
 
-    <!-- Top Section -->
-    <LinearLayout
-        android:id="@+id/topSection"
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/button_blue"
-        android:orientation="vertical"
-        android:padding="24dp"
+        android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Your Favorites"
-            android:textColor="@color/white"
-            android:textSize="24sp"
-            android:textStyle="bold" />
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:navigationIcon="@drawable/ic_back_white"
+            app:title="Your Favorites"
+            app:subtitle="0 Sports saved" />
 
-        <TextView
-            android:id="@+id/tvFavCount"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:text="0 Sports saved"
-            android:textColor="#E0E0E0"
-            android:textSize="14sp" />
-    </LinearLayout>
+    </com.google.android.material.appbar.AppBarLayout>
 
     <!-- Favorites List -->
     <androidx.recyclerview.widget.RecyclerView
@@ -43,7 +32,7 @@
         android:paddingBottom="16dp"
         android:paddingTop="8dp"
         app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
-        app:layout_constraintTop_toBottomOf="@id/topSection"
+        app:layout_constraintTop_toBottomOf="@id/appBarLayout"
         tools:listitem="@layout/item_favorite" />
 
     <!-- Empty State UI -->
@@ -57,7 +46,7 @@
         app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/topSection">
+        app:layout_constraintTop_toBottomOf="@id/appBarLayout">
 
         <ImageView
             android:layout_width="120dp"
@@ -97,9 +86,9 @@
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="86dp"
         android:background="?android:attr/windowBackground"
-        app:elevation="16dp"
+        app:elevation="8dp"
         app:labelVisibilityMode="labeled"
         app:layout_constraintBottom_toBottomOf="parent"
         app:menu="@menu/menu_bottom" />

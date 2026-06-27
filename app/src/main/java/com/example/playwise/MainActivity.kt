@@ -35,14 +35,36 @@ class MainActivity : AppCompatActivity() {
         setupClickListeners()
         setupBottomNavigation()
 
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-
         networkMonitor = NetworkMonitor(this)
     }
 
     override fun onResume() {
         super.onResume()
         updateFavoriteIcons()
+        
+        // Handle navigation selection sync
+        val openSearch = intent.getBooleanExtra("open_search", false)
+        if (openSearch) {
+            binding.bottomNavigation.selectedItemId = R.id.nav_search
+            binding.toolbar.menu.findItem(R.id.action_search)?.expandActionView()
+            // Clear the extra so it doesn't keep opening search on every resume
+            intent.removeExtra("open_search")
+        } else {
+            // Default to Home if search is not active
+            val searchItem = binding.toolbar.menu.findItem(R.id.action_search)
+            if (searchItem?.isActionViewExpanded != true) {
+                binding.bottomNavigation.selectedItemId = R.id.nav_home
+            }
+        }
+        
+        binding.bottomNavigation.post {
+            animateBottomNavigationItem(binding.bottomNavigation, binding.bottomNavigation.selectedItemId)
+        }
+    }
+
+    override fun onNewIntent(intent: Intent) {
+        super.onNewIntent(intent)
+        setIntent(intent) // Update intent for onResume
     }
 
     override fun onStart() {
@@ -60,17 +82,14 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupBottomNavigation() {
-        binding.bottomNavigation.selectedItemId = R.id.nav_home
-        
-        binding.bottomNavigation.post {
-            animateBottomNavigationItem(binding.bottomNavigation, R.id.nav_home)
-        }
-
         binding.bottomNavigation.setOnItemSelectedListener { item ->
-            animateBottomNavigationItem(binding.bottomNavigation, item.itemId)
             when (item.itemId) {
-                R.id.nav_home -> true
+                R.id.nav_home -> {
+                    animateBottomNavigationItem(binding.bottomNavigation, item.itemId)
+                    true
+                }
                 R.id.nav_search -> {
+                    animateBottomNavigationItem(binding.bottomNavigation, item.itemId)
                     binding.toolbar.menu.findItem(R.id.action_search)?.expandActionView()
                     true
                 }
@@ -95,7 +114,7 @@ class MainActivity : AppCompatActivity() {
                     startActivity(Intent(this, QuizActivity::class.java).apply {
                         flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
                     })
-                    true
+                    false
                 }
                 else -> false
             }
@@ -139,6 +158,14 @@ class MainActivity : AppCompatActivity() {
         binding.cardTennis.setOnClickListener { openSport("Tennis") }
         binding.cardBadminton.setOnClickListener { openSport("Badminton") }
         binding.cardRugby.setOnClickListener { openSport("Rugby") }
+        binding.cardGolf.setOnClickListener { openSport("Golf") }
+        binding.cardHandball.setOnClickListener { openSport("Handball") }
+        binding.cardBoxing.setOnClickListener { openSport("Boxing") }
+        binding.cardKarate.setOnClickListener { openSport("Karate") }
+        binding.cardWrestling.setOnClickListener { openSport("Wrestling") }
+        binding.cardFormula1.setOnClickListener { openSport("Formula 1") }
+        binding.cardShooting.setOnClickListener { openSport("Shooting") }
+        binding.cardKabaddi.setOnClickListener { openSport("Kabaddi") }
 
         binding.btnFavCricket.setOnClickListener { toggleFavorite("Cricket", binding.btnFavCricket) }
         binding.btnFavFootball.setOnClickListener { toggleFavorite("Football", binding.btnFavFootball) }
@@ -148,14 +175,28 @@ class MainActivity : AppCompatActivity() {
         binding.btnFavTennis.setOnClickListener { toggleFavorite("Tennis", binding.btnFavTennis) }
         binding.btnFavBadminton.setOnClickListener { toggleFavorite("Badminton", binding.btnFavBadminton) }
         binding.btnFavRugby.setOnClickListener { toggleFavorite("Rugby", binding.btnFavRugby) }
+        binding.btnFavGolf.setOnClickListener { toggleFavorite("Golf", binding.btnFavGolf) }
+        binding.btnFavHandball.setOnClickListener { toggleFavorite("Handball", binding.btnFavHandball) }
+        binding.btnFavBoxing.setOnClickListener { toggleFavorite("Boxing", binding.btnFavBoxing) }
+        binding.btnFavKarate.setOnClickListener { toggleFavorite("Karate", binding.btnFavKarate) }
+        binding.btnFavWrestling.setOnClickListener { toggleFavorite("Wrestling", binding.btnFavWrestling) }
+        binding.btnFavFormula1.setOnClickListener { toggleFavorite("Formula 1", binding.btnFavFormula1) }
+        binding.btnFavShooting.setOnClickListener { toggleFavorite("Shooting", binding.btnFavShooting) }
+        binding.btnFavKabaddi.setOnClickListener { toggleFavorite("Kabaddi", binding.btnFavKabaddi) }
     }
 
     private fun updateFavoriteIcons() {
-        val sports = listOf("Cricket", "Football", "Basketball", "Volleyball", "Hockey", "Tennis", "Badminton", "Rugby")
+        val sports = listOf(
+            "Cricket", "Football", "Basketball", "Volleyball", "Hockey", "Tennis", "Badminton", "Rugby",
+            "Golf", "Handball", "Boxing", "Karate", "Wrestling", "Formula 1", "Shooting", "Kabaddi"
+        )
         val buttons = listOf(
             binding.btnFavCricket, binding.btnFavFootball, binding.btnFavBasketball, 
             binding.btnFavVolleyball, binding.btnFavHockey, binding.btnFavTennis, 
-            binding.btnFavBadminton, binding.btnFavRugby
+            binding.btnFavBadminton, binding.btnFavRugby,
+            binding.btnFavGolf, binding.btnFavHandball, binding.btnFavBoxing,
+            binding.btnFavKarate, binding.btnFavWrestling, binding.btnFavFormula1,
+            binding.btnFavShooting, binding.btnFavKabaddi
         )
 
         sports.forEachIndexed { index, sport ->
@@ -226,6 +267,14 @@ class MainActivity : AppCompatActivity() {
             cardTennis.visibility = if ("tennis".contains(text)) View.VISIBLE else View.GONE
             cardBadminton.visibility = if ("badminton".contains(text)) View.VISIBLE else View.GONE
             cardRugby.visibility = if ("rugby".contains(text)) View.VISIBLE else View.GONE
+            cardGolf.visibility = if ("golf".contains(text)) View.VISIBLE else View.GONE
+            cardHandball.visibility = if ("handball".contains(text)) View.VISIBLE else View.GONE
+            cardBoxing.visibility = if ("boxing".contains(text)) View.VISIBLE else View.GONE
+            cardKarate.visibility = if ("karate".contains(text)) View.VISIBLE else View.GONE
+            cardWrestling.visibility = if ("wrestling".contains(text)) View.VISIBLE else View.GONE
+            cardFormula1.visibility = if ("formula 1".contains(text)) View.VISIBLE else View.GONE
+            cardShooting.visibility = if ("shooting".contains(text)) View.VISIBLE else View.GONE
+            cardKabaddi.visibility = if ("kabaddi".contains(text)) View.VISIBLE else View.GONE
         }
     }
 

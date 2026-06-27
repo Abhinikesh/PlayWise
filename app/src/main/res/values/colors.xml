@@ -1,4 +1,5 @@
 <resources>
+    <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#018786</color>
     <color name="teal_900">#00574B</color>
     <color name="white">#FFFFFF</color>

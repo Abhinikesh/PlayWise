@@ -37,6 +37,7 @@ class SportDetailActivity : AppCompatActivity() {
             "tennis" -> R.drawable.tennis
             "badminton" -> R.drawable.badminton
             "rugby" -> R.drawable.rugby
+            "golf", "handball", "boxing", "karate", "wrestling", "formula 1", "shooting", "kabaddi" -> R.drawable.rugby
             else -> android.R.drawable.ic_menu_gallery
         }
         binding.headerImage.setImageResource(sportImage)
