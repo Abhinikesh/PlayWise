@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.playwise"
+    namespace = "com.raimiclabs.playwise"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.example.playwise"
+        applicationId = "com.raimiclabs.playwise"
         minSdk = 24
         targetSdk = 36
         versionCode = 2
